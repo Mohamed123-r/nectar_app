@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nectar/constants.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({
@@ -11,54 +12,35 @@ class HomeViewBody extends StatelessWidget {
       headerSliverBuilder: (fff, ddfd) {
         return <Widget>[
           SliverAppBar(
+            backgroundColor: Colors.white,
             floating: true,
             pinned: true,
-            backgroundColor: Colors.white,
             bottom: PreferredSize(
-              preferredSize: const Size.fromHeight(64.0),
-              child: Row(
-                children: [
-                  Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 24,
-                        ),
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                            prefixIcon: const Icon(
-                              Icons.search,
-                            ),
-                            hintText: 'Search Store',
-                            filled: true,
-                            fillColor: Colors.white,
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(15.0),
-                            ),
-                          ),
-                        ),
-                      )),
-                ],
+              preferredSize: const Size.fromHeight(59.0),
+              child: TextFormField(
+                cursorColor: kPrimaryColor,
+                decoration: InputDecoration(
+                  prefixIcon: const Icon(
+                    Icons.search,
+                    color: Colors.black,
+                  ),
+                  hintText: 'Search Store',
+                  filled: true,
+                  fillColor: const Color(0xFFF2F3F2),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                    borderRadius: BorderRadius.circular(15.0),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(color: kPrimaryColor),
+                    borderRadius: BorderRadius.circular(15.0),
+                  ),
+                ),
               ),
             ),
-            elevation: 0,
             centerTitle: true,
-            title: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset(
-                  "assets/images/logo.png",
-                ),
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(Icons.location_on),
-                    Text(
-                      "Dhaka, Banassre",
-                    ),
-                  ],
-                ),
-              ],
-            ),
+            elevation: 0,
+            title: Image.asset("assets/images/logo.png"),
           ),
         ];
       },
