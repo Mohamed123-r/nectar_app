@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../../../core/utils/assets.dart';
 import 'custom_text_field.dart';
 
 class CustomSliverAppBar extends StatelessWidget {
@@ -16,7 +17,7 @@ class CustomSliverAppBar extends StatelessWidget {
       ),
       centerTitle: true,
       elevation: 0,
-      title: Image.asset("assets/images/logo.png"),
+      title: Image.asset(Assets.logo),
     );
   }
 }
