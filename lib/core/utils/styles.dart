@@ -34,4 +34,9 @@ abstract class Styles {
     fontSize: 28,
     fontWeight: FontWeight.w600,
   );
+  static const textStyle48 = TextStyle(
+    fontSize: 48,
+    fontWeight: FontWeight.w600,
+    color: Colors.white
+  );
 }

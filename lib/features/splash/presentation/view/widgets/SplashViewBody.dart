@@ -2,7 +2,7 @@ import 'package:easy_splash_screen/easy_splash_screen.dart';
 import 'package:nectar/constants.dart';
 import 'package:nectar/core/utils/assets.dart';
 import 'package:flutter/material.dart';
-import 'package:nectar/features/home/presentation/views/home_view.dart';
+import 'package:nectar/features/onBoarding/presentation/view/on_boarding_view.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({Key? key}) : super(key: key);
@@ -16,7 +16,7 @@ class _SplashPageState extends State<SplashPage> {
   Widget build(BuildContext context) {
     return EasySplashScreen(
       logoWidth: MediaQuery.of(context).size.width * 0.5,
-      logo:Image.asset(
+      logo: Image.asset(
         Assets.splash,
         fit: BoxFit.cover,
         color: Colors.white,
@@ -25,9 +25,8 @@ class _SplashPageState extends State<SplashPage> {
       backgroundColor: kPrimaryColor,
       loaderColor: Colors.white,
       showLoader: true,
-      navigator: const HomeView(),
+      navigator: const OnBoardingView(),
       durationInSeconds: 3,
     );
   }
 }
-
