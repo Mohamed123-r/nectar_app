@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:nectar/core/utils/app_router.dart';
 import 'package:nectar/core/widgets/custom_button.dart';
-
-
 
 class OnBoardingButton extends StatelessWidget {
   const OnBoardingButton({
@@ -10,8 +9,16 @@ class OnBoardingButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomButton(
+    return CustomButton(
       text: "Get Started",
+      onPressed: () {
+        Navigator.pushReplacement(
+          context,
+          AppRouter.router(
+            const RouteSettings(name: AppRouter.kLogInView),
+          ),
+        );
+      },
     );
   }
 }
