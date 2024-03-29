@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nectar/core/utils/styles.dart';
 import 'package:nectar/core/widgets/custom_text_field.dart';
 import 'package:nectar/core/widgets/custom_text_from_text_field.dart';
 import 'package:nectar/core/widgets/password_text_field.dart';
@@ -13,6 +14,15 @@ class SectionTextField extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        const Text(
+          "Loging",
+          style: Styles.textStyle26,
+        ),
+        const SizedBox(height: 15),
+        const CustomTextFromTextField(
+          hintText: 'Enter your emails and password',
+        ),
+        const SizedBox(height: 40),
         const CustomTextFromTextField(
           hintText: 'Email',
         ),
