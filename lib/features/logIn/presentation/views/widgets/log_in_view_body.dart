@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectar/constants.dart';
 import 'package:nectar/core/widgets/custom_button.dart';
 import 'package:nectar/core/widgets/custom_image_logo.dart';
@@ -14,12 +15,12 @@ class LogInViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding:  EdgeInsets.all(16.0.sp),
         child: Column(
           children: [
-            const SizedBox(height: 70),
+             SizedBox(height: 70.sp),
             const CustomImageLogo(),
-            const SizedBox(height: 100),
+             SizedBox(height: 100.sp),
             const SectionTextField(),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
@@ -35,12 +36,12 @@ class LogInViewBody extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 20),
+             SizedBox(height: 20.sp),
             CustomButton(
               text: "Log In",
               onPressed: () {},
             ),
-            const SizedBox(height: 25),
+             SizedBox(height: 25.sp),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

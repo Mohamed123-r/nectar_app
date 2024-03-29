@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectar/constants.dart';
 import 'package:nectar/core/utils/styles.dart';
 
@@ -15,7 +16,7 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      height: 67,
+      height: 67.sp,
       minWidth: MediaQuery.of(context).size.width,
       color: kPrimaryColor,
       shape: RoundedRectangleBorder(

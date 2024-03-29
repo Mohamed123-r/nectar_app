@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 abstract class Styles {
   static const textStyle14 = TextStyle(
@@ -6,8 +7,8 @@ abstract class Styles {
     fontWeight: FontWeight.normal,
     color: Color(0xff7C7C7C),
   );
-  static const textStyle16 = TextStyle(
-    fontSize: 16,
+  static var textStyle16 = TextStyle(
+    fontSize: 16.sp,
     fontWeight: FontWeight.w600,
   );
   static const textStyle18 = TextStyle(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectar/core/utils/assets.dart';
 import 'package:nectar/core/utils/styles.dart';
 import 'package:nectar/core/widgets/custom_image_logo.dart';
@@ -46,6 +47,7 @@ class OnBoardingBody extends StatelessWidget {
                 "Ger your groceries in as fast as one hour",
                 style: Styles.textStyle16.copyWith(
                   color: const Color(0xff7C7C7C),
+                  fontSize: 16.0.sp,
                 ),
               ),
               const SizedBox(
