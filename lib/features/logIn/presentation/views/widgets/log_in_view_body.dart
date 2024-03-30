@@ -20,7 +20,7 @@ class LogInViewBody extends StatelessWidget {
           children: [
              SizedBox(height: 70.sp),
             const CustomImageLogo(),
-             SizedBox(height: 100.sp),
+             const SizedBox(height: 100),
             const SectionTextField(),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,

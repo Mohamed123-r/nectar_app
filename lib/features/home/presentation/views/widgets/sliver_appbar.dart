@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/utils/assets.dart';
 import 'custom_text_field.dart';
 
@@ -11,9 +12,9 @@ class CustomSliverAppBar extends StatelessWidget {
       backgroundColor: Colors.white,
       floating: true,
       pinned: true,
-      bottom: const PreferredSize(
-        preferredSize: Size.fromHeight(59.0),
-        child: CustomTextField(),
+      bottom:  PreferredSize(
+        preferredSize: Size.fromHeight(59.0.sp),
+        child: const CustomTextField(),
       ),
       centerTitle: true,
       elevation: 0,

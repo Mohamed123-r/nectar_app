@@ -24,34 +24,33 @@ class OnBoardingBody extends StatelessWidget {
           ),
         ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          padding:  EdgeInsets.symmetric(horizontal: 16.0.sp),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               const CustomImageLogo(),
-              const SizedBox(
-                height: 35,
+               SizedBox(
+                height: 35.sp,
               ),
-              const Text(
+               const Text(
                 "Welcome",
                 style: Styles.textStyle48,
               ),
-              const Text(
+               const Text(
                 "to our store",
                 style: Styles.textStyle48,
               ),
-              const SizedBox(
-                height: 19,
+               SizedBox(
+                height: 19.sp,
               ),
               Text(
                 "Ger your groceries in as fast as one hour",
                 style: Styles.textStyle16.copyWith(
-                  color: const Color(0xff7C7C7C),
-                  fontSize: 16.0.sp,
+                  color: const Color(0xff7C7C7C)
                 ),
               ),
-              const SizedBox(
-                height: 40,
+               SizedBox(
+                height: 40.sp,
               ),
               const OnBoardingButton(),
               SizedBox(

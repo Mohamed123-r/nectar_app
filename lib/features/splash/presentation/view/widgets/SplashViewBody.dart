@@ -1,4 +1,5 @@
 import 'package:easy_splash_screen/easy_splash_screen.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectar/constants.dart';
 import 'package:nectar/core/utils/assets.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,7 @@ class _SplashPageState extends State<SplashPage> {
         Assets.splash,
         fit: BoxFit.cover,
         color: Colors.white,
-        width: 300,
+        width: 300.sp,
       ),
       backgroundColor: kPrimaryColor,
       loaderColor: Colors.white,
