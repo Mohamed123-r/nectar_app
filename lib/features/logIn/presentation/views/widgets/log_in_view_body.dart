@@ -1,13 +1,14 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectar/constants.dart';
+import 'package:nectar/core/utils/app_router.dart';
 import 'package:nectar/core/utils/assets.dart';
+import 'package:nectar/core/utils/styles.dart';
 import 'package:nectar/core/widgets/custom_button.dart';
 import 'package:nectar/core/widgets/custom_image_logo.dart';
 import 'package:nectar/features/logIn/presentation/views/widgets/section_text_field.dart';
 
-import '../../../../../core/utils/styles.dart';
+
 
 class LogInViewBody extends StatelessWidget {
   const LogInViewBody({super.key});
@@ -24,33 +25,40 @@ class LogInViewBody extends StatelessWidget {
       ),
       child: SingleChildScrollView(
         child: Padding(
-          padding:  EdgeInsets.all(16.0.sp),
+          padding: EdgeInsets.all(16.0.sp),
           child: Column(
             children: [
-               SizedBox(height: 70.sp),
+              SizedBox(height: 70.sp),
               const CustomImageLogo(),
-               const SizedBox(height: 100),
+              const SizedBox(height: 100),
               const SectionTextField(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        AppRouter.router(
+                          const RouteSettings(
+                            name: AppRouter.kForgetPasswordView,
+                          ),
+                        ),
+                      );
+                    },
                     child: Text(
                       "Forgot Password?",
-                      style: Styles.textStyle14.copyWith(
-                       color: Colors.black
-                      ),
+                      style: Styles.textStyle14.copyWith(color: Colors.black),
                     ),
                   ),
                 ],
               ),
-               SizedBox(height: 20.sp),
+              SizedBox(height: 20.sp),
               CustomButton(
                 text: "Log In",
                 onPressed: () {},
               ),
-               SizedBox(height: 25.sp),
+              SizedBox(height: 25.sp),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
