@@ -24,37 +24,53 @@ class ForgotPasswordView extends StatelessWidget {
         child: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.all(16.0.sp),
-            child: Column(
+            child: Stack(
               children: [
-                SizedBox(height: 70.sp),
-                const CustomImageLogo(),
-                const SizedBox(height: 100),
                 Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
-                      "Forgot Password",
-                      style: Styles.textStyle26,
+                    SizedBox(height: 70.sp),
+                    const CustomImageLogo(),
+                    const SizedBox(height: 100),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          "Forgot Password",
+                          style: Styles.textStyle26,
+                        ),
+                        SizedBox(height: 15.sp),
+                        const CustomTextFromTextField(
+                            hintText: "Enter your email for verification"
+                                " process we will send 5 digits code"
+                                " to your email"),
+                        SizedBox(height: 40.sp),
+                        const CustomTextFromTextField(
+                          hintText: 'Email',
+                        ),
+                        CustomTextField(
+                          onSaved: (value) {},
+                          keyboardType: TextInputType.emailAddress,
+                        ),
+                      ],
                     ),
-                    SizedBox(height: 15.sp),
-                    const CustomTextFromTextField(
-                        hintText: "Enter your email for verification"
-                            " process we will send 5 digits code"
-                            " to your email"),
-                    SizedBox(height: 40.sp),
-                    const CustomTextFromTextField(
-                      hintText: 'Email',
-                    ),
-                    CustomTextField(
-                      onSaved: (value) {},
-                      keyboardType: TextInputType.emailAddress,
+                    SizedBox(height: 60.sp),
+                    CustomButton(
+                      text: "Continue",
+                      onPressed: () {},
                     ),
                   ],
                 ),
-                SizedBox(height: 60.sp),
-                CustomButton(
-                  text: "Continue",
-                  onPressed: () {},
+                Positioned(
+                  top: 20,
+                  child: IconButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    icon: Icon(
+                      Icons.arrow_back_ios,
+                      size: 25.sp,
+                    ),
+                  ),
                 ),
               ],
             ),
