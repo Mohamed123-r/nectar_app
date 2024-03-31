@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nectar/features/home/presentation/views/home_view.dart';
+import 'package:nectar/features/logIn/presentation/views/forget_password_view.dart';
 import 'package:nectar/features/logIn/presentation/views/log_in_view.dart';
 import 'package:nectar/features/onBoarding/presentation/view/on_boarding_view.dart';
 import 'package:nectar/features/splash/presentation/view/splash_view.dart';
@@ -8,6 +9,9 @@ abstract class AppRouter {
   static const kSplash = '/';
   static const kOnBoarding = '/onBoarding';
   static const kLogInView = '/login';
+  static const kForgetPasswordView = '/forgetPassword';
+  static const kResetPasswordView = '/resetPassword';
+  static const kSignUpView = '/signup';
   static const kHomeView = '/home';
 
   static Route<Object?> router(RouteSettings settings) {
@@ -26,6 +30,10 @@ abstract class AppRouter {
           return const LogInView(); //replace this Scaffold with a login Screen
         });
 
+      case kForgetPasswordView:
+        return MaterialPageRoute(builder: (context) {
+          return const ForgotPasswordView(); //replace this Scaffold with a login Screen
+        });
       case kHomeView:
         return MaterialPageRoute(builder: (context) {
           return const HomeView(); //replace this Scaffold with a Home Screen
