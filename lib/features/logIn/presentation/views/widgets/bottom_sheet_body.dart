@@ -25,7 +25,7 @@ class BottomSheetBody extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             const Text(
-              "Forget Password",
+              "Reset Password",
               style: Styles.textStyle26,
             ),
             SizedBox(height: 15.sp),
