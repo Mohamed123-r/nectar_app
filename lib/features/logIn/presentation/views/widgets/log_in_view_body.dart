@@ -6,9 +6,7 @@ import 'package:nectar/core/utils/assets.dart';
 import 'package:nectar/core/utils/styles.dart';
 import 'package:nectar/core/widgets/custom_button.dart';
 import 'package:nectar/core/widgets/custom_image_logo.dart';
-import 'package:nectar/features/logIn/presentation/views/widgets/section_text_field_from-logIn.dart';
-
-
+import 'package:nectar/features/logIn/presentation/views/widgets/section_text_field_from_log_in.dart';
 
 class LogInViewBody extends StatelessWidget {
   const LogInViewBody({super.key});
@@ -31,7 +29,7 @@ class LogInViewBody extends StatelessWidget {
               SizedBox(height: 70.sp),
               const CustomImageLogo(),
               const SizedBox(height: 100),
-              const SectionTextField(),
+              const SectionTextFieldFromLogIn(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
@@ -48,7 +46,9 @@ class LogInViewBody extends StatelessWidget {
                     },
                     child: Text(
                       "Forgot Password?",
-                      style: Styles.textStyle14.copyWith(color: Colors.black),
+                      style: Styles.textStyle14.copyWith(
+                        color: Colors.black,
+                      ),
                     ),
                   ),
                 ],
