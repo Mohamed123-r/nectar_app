@@ -6,6 +6,7 @@ import 'package:nectar/core/widgets/custom_button.dart';
 import 'package:nectar/core/widgets/custom_image_logo.dart';
 import 'package:nectar/core/widgets/custom_text_field.dart';
 import 'package:nectar/core/widgets/custom_text_from_text_field.dart';
+import 'package:nectar/features/logIn/presentation/views/widgets/bottom_sheet_body.dart';
 
 class ForgotPasswordView extends StatelessWidget {
   const ForgotPasswordView({super.key});
@@ -56,7 +57,21 @@ class ForgotPasswordView extends StatelessWidget {
                     SizedBox(height: 60.sp),
                     CustomButton(
                       text: "Continue",
-                      onPressed: () {},
+                      onPressed: () {
+                        showModalBottomSheet(
+                          isScrollControlled: true,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(30.sp),
+                              topRight: Radius.circular(30.sp),
+                            ),
+                          ),
+                          context: context,
+                          builder: (context) {
+                            return const BottomSheetBody();
+                          },
+                        );
+                      },
                     ),
                   ],
                 ),
@@ -80,3 +95,5 @@ class ForgotPasswordView extends StatelessWidget {
     );
   }
 }
+
+
