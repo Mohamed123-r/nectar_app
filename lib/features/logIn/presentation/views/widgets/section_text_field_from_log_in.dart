@@ -5,8 +5,8 @@ import 'package:nectar/core/widgets/custom_text_field.dart';
 import 'package:nectar/core/widgets/custom_text_from_text_field.dart';
 import 'package:nectar/core/widgets/password_text_field.dart';
 
-class SectionTextField extends StatelessWidget {
-  const SectionTextField({
+class SectionTextFieldFromLogIn extends StatelessWidget {
+  const SectionTextFieldFromLogIn({
     super.key,
   });
 
