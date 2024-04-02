@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nectar/core/utils/app_router.dart';
 import 'package:nectar/core/utils/assets.dart';
 import 'package:nectar/core/utils/styles.dart';
 import 'package:nectar/core/widgets/custom_button.dart';
@@ -79,7 +80,12 @@ class ForgotPasswordView extends StatelessWidget {
                   top: 20,
                   child: IconButton(
                     onPressed: () {
-                      Navigator.pop(context);
+                      Navigator.pushReplacement(
+                        context,
+                        AppRouter.router(
+                          const RouteSettings(name: AppRouter.kLogInView),
+                        ),
+                      );
                     },
                     icon: Icon(
                       Icons.arrow_back_ios,
@@ -95,5 +101,3 @@ class ForgotPasswordView extends StatelessWidget {
     );
   }
 }
-
-

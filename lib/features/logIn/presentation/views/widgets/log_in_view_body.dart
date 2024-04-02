@@ -35,7 +35,7 @@ class LogInViewBody extends StatelessWidget {
                 children: [
                   TextButton(
                     onPressed: () {
-                      Navigator.push(
+                      Navigator.pushReplacement(
                         context,
                         AppRouter.router(
                           const RouteSettings(
