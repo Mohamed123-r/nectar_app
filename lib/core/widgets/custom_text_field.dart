@@ -22,8 +22,9 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       cursorColor: kPrimaryColor,
+      autovalidateMode: AutovalidateMode.onUserInteraction,
       validator: (value) {
-        if (value?.isEmpty ?? true) {
+        if (value == null || value.isEmpty) {
           return "Field is required";
         } else {
           return null;
@@ -37,6 +38,9 @@ class CustomTextField extends StatelessWidget {
         suffixIconColor: kGreyColor,
         focusedBorder: const UnderlineInputBorder(
           borderSide: BorderSide(color: kPrimaryColor),
+        ),
+        errorBorder: const UnderlineInputBorder(
+          borderSide: BorderSide(color: Colors.red),
         ),
       ),
       keyboardType: keyboardType,
