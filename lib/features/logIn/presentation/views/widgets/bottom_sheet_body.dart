@@ -40,9 +40,12 @@ class BottomSheetBody extends StatelessWidget {
             CustomButton(
               text: 'Reset Password',
               onPressed: () {
-                Navigator.pushReplacement(context, AppRouter.router(
-                  const RouteSettings(name: AppRouter.kCongratulationView),
-                ));
+                Navigator.pop(context);
+                Navigator.pushReplacement(
+                    context,
+                    AppRouter.router(
+                      const RouteSettings(name: AppRouter.kCongratulationView),
+                    ));
               },
             ),
             SizedBox(
