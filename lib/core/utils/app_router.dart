@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nectar/core/views/congratulation_view.dart';
+import 'package:nectar/features/logIn/presentation/views/congratulation_view.dart';
 import 'package:nectar/features/home/presentation/views/home_view.dart';
 import 'package:nectar/features/logIn/presentation/views/forget_password_view.dart';
 import 'package:nectar/features/logIn/presentation/views/log_in_view.dart';
