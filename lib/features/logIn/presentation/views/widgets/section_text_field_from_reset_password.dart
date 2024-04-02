@@ -4,6 +4,8 @@ import 'package:nectar/constants.dart';
 import 'package:nectar/core/widgets/custom_text_from_text_field.dart';
 import 'package:nectar/core/widgets/password_text_field.dart';
 
+import 'custom_item_from_opt.dart';
+
 class SectionTextFieldFromResetPassword extends StatelessWidget {
   const SectionTextFieldFromResetPassword({super.key});
 
@@ -15,6 +17,7 @@ class SectionTextFieldFromResetPassword extends StatelessWidget {
         const CustomTextFromTextField(
           hintText: 'Enter the 5 digits code',
         ),
+        SizedBox(height: 20.sp),
         Container(
           height: 67.sp,
           width: MediaQuery.of(context).size.width,
@@ -22,159 +25,10 @@ class SectionTextFieldFromResetPassword extends StatelessWidget {
             border: Border.all(color: kPrimaryColor),
             borderRadius: BorderRadius.circular(15.sp),
           ),
-          child: Row(
+          child: const Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              SizedBox(
-                height: 45,
-                width: 45,
-                child: TextFormField(
-                  keyboardType: TextInputType.number,
-                  maxLines: 1,
-                  cursorColor: kGreyColor,
-                  onSaved: (value) {},
-                  onChanged: (e) {
-                    if (e.length == 1) {
-                      FocusScope.of(context).nextFocus();
-                    } else {
-                      FocusScope.of(context).previousFocus();
-                    }
-                  },
-                  decoration: InputDecoration(
-                    fillColor: kPrimaryColor,
-                    filled: true,
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5),
-                      borderSide: const BorderSide(color: kPrimaryColor),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5),
-                      borderSide: const BorderSide(color: kPrimaryColor),
-                    ),
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-              ),
-              SizedBox(
-                height: 45,
-                width: 45,
-                child: TextFormField(
-                  keyboardType: TextInputType.number,
-                  maxLines: 1,
-                  cursorColor: kGreyColor,
-                  onSaved: (value) {},
-                  onChanged: (e) {
-                    if (e.length == 1) {
-                      FocusScope.of(context).nextFocus();
-                    } else {
-                      FocusScope.of(context).previousFocus();
-                    }
-                  },
-                  decoration: InputDecoration(
-                    fillColor: kPrimaryColor,
-                    filled: true,
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5),
-                      borderSide: const BorderSide(color: kPrimaryColor),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5),
-                      borderSide: const BorderSide(color: kPrimaryColor),
-                    ),
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-              ),
-              SizedBox(
-                height: 45,
-                width: 45,
-                child: TextFormField(
-                  keyboardType: TextInputType.number,
-                  maxLines: 1,
-                  cursorColor: kGreyColor,
-                  onSaved: (value) {},
-                  onChanged: (e) {
-                    if (e.length == 1) {
-                      FocusScope.of(context).nextFocus();
-                    } else {
-                      FocusScope.of(context).previousFocus();
-                    }
-                  },
-                  decoration: InputDecoration(
-                    fillColor: kPrimaryColor,
-                    filled: true,
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5),
-                      borderSide: const BorderSide(color: kPrimaryColor),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5),
-                      borderSide: const BorderSide(color: kPrimaryColor),
-                    ),
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-              ),
-              SizedBox(
-                height: 45,
-                width: 45,
-                child: TextFormField(
-                  keyboardType: TextInputType.number,
-                  maxLines: 1,
-                  cursorColor: kGreyColor,
-                  onSaved: (value) {},
-                  onChanged: (e) {
-                    if (e.length == 1) {
-                      FocusScope.of(context).nextFocus();
-                    } else {
-                      FocusScope.of(context).previousFocus();
-                    }
-                  },
-                  decoration: InputDecoration(
-                    fillColor: kPrimaryColor,
-                    filled: true,
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5),
-                      borderSide: const BorderSide(color: kPrimaryColor),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5),
-                      borderSide: const BorderSide(color: kPrimaryColor),
-                    ),
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-              ),
-              SizedBox(
-                height: 45,
-                width: 45,
-                child: TextFormField(
-                  keyboardType: TextInputType.number,
-                  maxLines: 1,
-                  cursorColor: kGreyColor,
-                  onSaved: (value) {},
-                  onChanged: (e) {
-                    if (e.length == 1) {
-                      FocusScope.of(context).nextFocus();
-                    } else {
-                      FocusScope.of(context).previousFocus();
-                    }
-                  },
-                  decoration: InputDecoration(
-                    fillColor: kPrimaryColor,
-                    filled: true,
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5),
-                      borderSide: const BorderSide(color: kPrimaryColor),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5),
-                      borderSide: const BorderSide(color: kPrimaryColor),
-                    ),
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-              ),
+              CustomItemFromOPT(),
             ],
           ),
         ),
@@ -192,3 +46,5 @@ class SectionTextFieldFromResetPassword extends StatelessWidget {
     );
   }
 }
+
+
