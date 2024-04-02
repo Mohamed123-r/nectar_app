@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nectar/core/views/congratulation_view.dart';
 import 'package:nectar/features/home/presentation/views/home_view.dart';
 import 'package:nectar/features/logIn/presentation/views/forget_password_view.dart';
 import 'package:nectar/features/logIn/presentation/views/log_in_view.dart';
@@ -11,6 +12,7 @@ abstract class AppRouter {
   static const kLogInView = '/login';
   static const kForgetPasswordView = '/forgetPassword';
   static const kResetPasswordView = '/resetPassword';
+  static const kCongratulationView = '/congratulation';
   static const kSignUpView = '/signup';
   static const kHomeView = '/home';
 
@@ -34,6 +36,12 @@ abstract class AppRouter {
         return MaterialPageRoute(builder: (context) {
           return const ForgotPasswordView(); //replace this Scaffold with a login Screen
         });
+
+      case kCongratulationView:
+        return MaterialPageRoute(builder: (context) {
+          return const CongratulationView(); //replace this Scaffold with a congratulation Screen
+        });
+
       case kHomeView:
         return MaterialPageRoute(builder: (context) {
           return const HomeView(); //replace this Scaffold with a Home Screen

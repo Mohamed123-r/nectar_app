@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nectar/core/utils/app_router.dart';
 import 'package:nectar/core/utils/styles.dart';
 import 'package:nectar/core/widgets/custom_button.dart';
 import 'package:nectar/core/widgets/custom_text_from_text_field.dart';
@@ -39,7 +40,9 @@ class BottomSheetBody extends StatelessWidget {
             CustomButton(
               text: 'Reset Password',
               onPressed: () {
-                Navigator.pop(context);
+                Navigator.pushReplacement(context, AppRouter.router(
+                  const RouteSettings(name: AppRouter.kCongratulationView),
+                ));
               },
             ),
             SizedBox(
