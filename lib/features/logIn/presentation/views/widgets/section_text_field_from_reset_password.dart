@@ -55,6 +55,126 @@ class SectionTextFieldFromResetPassword extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
               ),
+              SizedBox(
+                height: 45,
+                width: 45,
+                child: TextFormField(
+                  keyboardType: TextInputType.number,
+                  maxLines: 1,
+                  cursorColor: kGreyColor,
+                  onSaved: (value) {},
+                  onChanged: (e) {
+                    if (e.length == 1) {
+                      FocusScope.of(context).nextFocus();
+                    } else {
+                      FocusScope.of(context).previousFocus();
+                    }
+                  },
+                  decoration: InputDecoration(
+                    fillColor: kPrimaryColor,
+                    filled: true,
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: const BorderSide(color: kPrimaryColor),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: const BorderSide(color: kPrimaryColor),
+                    ),
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              SizedBox(
+                height: 45,
+                width: 45,
+                child: TextFormField(
+                  keyboardType: TextInputType.number,
+                  maxLines: 1,
+                  cursorColor: kGreyColor,
+                  onSaved: (value) {},
+                  onChanged: (e) {
+                    if (e.length == 1) {
+                      FocusScope.of(context).nextFocus();
+                    } else {
+                      FocusScope.of(context).previousFocus();
+                    }
+                  },
+                  decoration: InputDecoration(
+                    fillColor: kPrimaryColor,
+                    filled: true,
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: const BorderSide(color: kPrimaryColor),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: const BorderSide(color: kPrimaryColor),
+                    ),
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              SizedBox(
+                height: 45,
+                width: 45,
+                child: TextFormField(
+                  keyboardType: TextInputType.number,
+                  maxLines: 1,
+                  cursorColor: kGreyColor,
+                  onSaved: (value) {},
+                  onChanged: (e) {
+                    if (e.length == 1) {
+                      FocusScope.of(context).nextFocus();
+                    } else {
+                      FocusScope.of(context).previousFocus();
+                    }
+                  },
+                  decoration: InputDecoration(
+                    fillColor: kPrimaryColor,
+                    filled: true,
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: const BorderSide(color: kPrimaryColor),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: const BorderSide(color: kPrimaryColor),
+                    ),
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              SizedBox(
+                height: 45,
+                width: 45,
+                child: TextFormField(
+                  keyboardType: TextInputType.number,
+                  maxLines: 1,
+                  cursorColor: kGreyColor,
+                  onSaved: (value) {},
+                  onChanged: (e) {
+                    if (e.length == 1) {
+                      FocusScope.of(context).nextFocus();
+                    } else {
+                      FocusScope.of(context).previousFocus();
+                    }
+                  },
+                  decoration: InputDecoration(
+                    fillColor: kPrimaryColor,
+                    filled: true,
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: const BorderSide(color: kPrimaryColor),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: const BorderSide(color: kPrimaryColor),
+                    ),
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
             ],
           ),
         ),
