@@ -21,7 +21,7 @@ class _CongratulationViewState extends State<CongratulationView> {
       Navigator.pushReplacement(
         context,
         AppRouter.router(
-          const RouteSettings(name: AppRouter.kLogInView),
+          const RouteSettings(name: AppRouter.kHomeView),
         ),
       );
     });
