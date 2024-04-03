@@ -2,15 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectar/constants.dart';
 
-class CustomTextField extends StatelessWidget {
-  const CustomTextField({
-    super.key,
-  });
+class CustomSearchTextField extends StatelessWidget {
+  const CustomSearchTextField({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsets.symmetric(horizontal: 16.0.sp),
+      padding: EdgeInsets.symmetric(horizontal: 16.0.sp),
       child: TextFormField(
         cursorColor: kPrimaryColor,
         decoration: InputDecoration(
