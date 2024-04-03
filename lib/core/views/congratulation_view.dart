@@ -58,9 +58,6 @@ class _CongratulationViewState extends State<CongratulationView> {
               height: 30.sp,
             ),
             const CustomTextFromTextField(
-              hintText: "Your change password is success",
-            ),
-            const CustomTextFromTextField(
               hintText: "Welcome to our app",
             ),
           ],
