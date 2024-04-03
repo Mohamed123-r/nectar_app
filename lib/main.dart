@@ -18,16 +18,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-      designSize: const Size(413.83, 896),
+    return const ScreenUtilInit(
+      designSize: Size(413.83, 896),
       minTextAdapt: true,
       splitScreenMode: true,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          useMaterial3: false,
-        ),
-        home: const SplashView(),
+        home: SplashView(),
       ),
     );
   }

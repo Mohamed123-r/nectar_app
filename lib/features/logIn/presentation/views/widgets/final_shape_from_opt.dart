@@ -26,6 +26,7 @@ class FinalShapeFromOPT extends StatelessWidget {
           CustomItemFromOPT(),
           CustomItemFromOPT(),
           CustomItemFromOPT(),
+          CustomItemFromOPT(),
         ],
       ),
     );

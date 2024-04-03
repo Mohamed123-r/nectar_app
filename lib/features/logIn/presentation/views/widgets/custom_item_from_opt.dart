@@ -25,18 +25,21 @@ class CustomItemFromOPT extends StatelessWidget {
           }
         },
         decoration: InputDecoration(
-          fillColor: kPrimaryColor,
-          filled: true,
-          focusedBorder: OutlineInputBorder(
+
+          focusedBorder: UnderlineInputBorder(
             borderRadius: BorderRadius.circular(5.sp),
             borderSide: const BorderSide(color: kPrimaryColor),
           ),
-          enabledBorder: OutlineInputBorder(
+          enabledBorder:UnderlineInputBorder(
             borderRadius: BorderRadius.circular(5.sp),
-            borderSide: const BorderSide(color: kPrimaryColor),
+            borderSide: const BorderSide(color: kGreyColor),
           ),
         ),
         textAlign: TextAlign.center,
+        style: TextStyle(
+          fontSize: 20.sp,
+          fontWeight: FontWeight.bold,
+        ),
       ),
     );
   }
