@@ -4,6 +4,7 @@ import 'package:nectar/features/home/presentation/views/home_view.dart';
 import 'package:nectar/features/logIn/presentation/views/forget_password_view.dart';
 import 'package:nectar/features/logIn/presentation/views/log_in_view.dart';
 import 'package:nectar/features/onBoarding/presentation/view/on_boarding_view.dart';
+import 'package:nectar/features/signUp/presentation/views/sign-up_view.dart';
 import 'package:nectar/features/splash/presentation/view/splash_view.dart';
 
 abstract class AppRouter {
@@ -40,6 +41,11 @@ abstract class AppRouter {
       case kCongratulationView:
         return MaterialPageRoute(builder: (context) {
           return const CongratulationView(); //replace this Scaffold with a congratulation Screen
+        });
+
+      case kSignUpView:
+        return MaterialPageRoute(builder: (context) {
+          return const SignUpView(); //replace this Scaffold with a signup Screen
         });
 
       case kHomeView:

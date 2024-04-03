@@ -70,7 +70,16 @@ class LogInViewBody extends StatelessWidget {
                     ),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                        context,
+                        AppRouter.router(
+                          const RouteSettings(
+                            name: AppRouter.kSignUpView,
+                          ),
+                        ),
+                      );
+                    },
                     child: Text(
                       "Sign Up",
                       style: Styles.textStyle14.copyWith(
