@@ -56,7 +56,16 @@ class LogInViewBody extends StatelessWidget {
               SizedBox(height: 20.sp),
               CustomButton(
                 text: "Log In",
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    AppRouter.router(
+                      const RouteSettings(
+                        name: AppRouter.kCongratulationView,
+                      ),
+                    ),
+                  );
+                },
               ),
               SizedBox(height: 25.sp),
               Row(

@@ -33,14 +33,15 @@ class SignUpBody extends StatelessWidget {
                 const SctionTextFieldFromSignUp(),
                 SizedBox(height: 20.sp),
                 const CustomTextFromTextField(
-                  hintText:
-                      "By continuing you agree to our"
-                          " Terms of Service and Privacy Policy.",
+                  hintText: "By continuing you agree to our"
+                      " Terms of Service and Privacy Policy.",
                 ),
                 SizedBox(height: 30.sp),
                 CustomButton(
                   text: "Sign Up",
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                 ),
                 SizedBox(height: 25.sp),
                 Row(
@@ -55,7 +56,7 @@ class SignUpBody extends StatelessWidget {
                     ),
                     TextButton(
                       onPressed: () {
-                       Navigator.pop(context);
+                        Navigator.pop(context);
                       },
                       child: Text(
                         "Log In",
