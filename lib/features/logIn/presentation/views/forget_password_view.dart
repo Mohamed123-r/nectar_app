@@ -43,7 +43,7 @@ class ForgotPasswordView extends StatelessWidget {
                         SizedBox(height: 15.sp),
                         const CustomTextFromTextField(
                             hintText: "Enter your email for verification"
-                                " process we will send 5 digits code"
+                                " process we will send 6 digits code"
                                 " to your email"),
                         SizedBox(height: 40.sp),
                         const CustomTextFromTextField(
