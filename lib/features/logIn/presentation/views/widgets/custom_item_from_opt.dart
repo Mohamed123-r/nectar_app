@@ -25,14 +25,12 @@ class CustomItemFromOPT extends StatelessWidget {
           }
         },
         decoration: InputDecoration(
-
           focusedBorder: UnderlineInputBorder(
             borderRadius: BorderRadius.circular(5.sp),
             borderSide: const BorderSide(color: kPrimaryColor),
           ),
-          enabledBorder:UnderlineInputBorder(
-            borderRadius: BorderRadius.circular(5.sp),
-            borderSide: const BorderSide(color: kGreyColor),
+          enabledBorder:const UnderlineInputBorder(
+            borderSide: BorderSide(color: kGreyColor),
           ),
         ),
         textAlign: TextAlign.center,

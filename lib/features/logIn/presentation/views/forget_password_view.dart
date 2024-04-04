@@ -7,7 +7,7 @@ import 'package:nectar/core/widgets/custom_button.dart';
 import 'package:nectar/core/widgets/custom_image_logo.dart';
 import 'package:nectar/core/widgets/custom_text_field.dart';
 import 'package:nectar/core/widgets/custom_text_from_text_field.dart';
-import 'package:nectar/features/logIn/presentation/views/widgets/bottom_sheet_body.dart';
+import 'package:nectar/features/logIn/presentation/views/widgets/bottom_sheet_body_from_send_code.dart';
 
 class ForgotPasswordView extends StatelessWidget {
   const ForgotPasswordView({super.key});
@@ -69,7 +69,7 @@ class ForgotPasswordView extends StatelessWidget {
                           ),
                           context: context,
                           builder: (context) {
-                            return const BottomSheetBody();
+                            return const BottomSheetBodyFromSendCode();
                           },
                         );
                       },
