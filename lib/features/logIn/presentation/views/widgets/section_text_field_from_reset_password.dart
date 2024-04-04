@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectar/core/widgets/custom_text_field.dart';
 import 'package:nectar/core/widgets/custom_text_from_text_field.dart';
 import 'package:nectar/core/widgets/password_text_field.dart';
-import 'final_shape_from_opt.dart';
 
 class SectionTextFieldFromResetPassword extends StatelessWidget {
   const SectionTextFieldFromResetPassword({super.key});
@@ -14,12 +13,6 @@ class SectionTextFieldFromResetPassword extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const CustomTextFromTextField(
-          hintText: 'Enter the 6 digits code',
-        ),
-        SizedBox(height: 20.sp),
-        const FinalShapeFromOPT(),
-        SizedBox(height: 30.sp),
-        const CustomTextFromTextField(
           hintText: 'Email',
         ),
         CustomTextField(
@@ -28,7 +21,7 @@ class SectionTextFieldFromResetPassword extends StatelessWidget {
         ),
         SizedBox(height: 30.sp),
         const CustomTextFromTextField(
-          hintText: 'Password',
+          hintText: 'New Password',
         ),
         const PasswordTextField(),
         SizedBox(height: 30.sp),
