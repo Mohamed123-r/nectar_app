@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectar/core/utils/app_router.dart';
@@ -6,8 +7,8 @@ import 'package:nectar/core/widgets/custom_button.dart';
 import 'package:nectar/core/widgets/custom_text_from_text_field.dart';
 import 'package:nectar/features/logIn/presentation/views/widgets/section_text_field_from_reset_password.dart';
 
-class BottomSheetBody extends StatelessWidget {
-  const BottomSheetBody({
+class BottomSheetBodyFromResetPassword extends StatelessWidget {
+  const BottomSheetBodyFromResetPassword({
     super.key,
   });
 
@@ -32,7 +33,7 @@ class BottomSheetBody extends StatelessWidget {
             SizedBox(height: 15.sp),
             const CustomTextFromTextField(
               hintText:
-                  'Enter your email for verification process we will send 5 digits code to your email',
+              'Enter new password for your account to reset password',
             ),
             SizedBox(height: 30.sp),
             const SectionTextFieldFromResetPassword(),
