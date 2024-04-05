@@ -20,15 +20,18 @@ class ServerFailure extends Failure {
       case DioExceptionType.badCertificate:
         return ServerFailure('Bad certificate');
       case DioExceptionType.badResponse:
-      return ServerFailure.fromResponse(
-        dioException.response!.statusCode!,
-        dioException.response!.data,
-      );
+        return ServerFailure.fromResponse(
+          dioException.response!.statusCode!,
+          dioException.response!.data,
+        );
       case DioExceptionType.cancel:
         return ServerFailure('Request to ApiServer was cancelled');
       case DioExceptionType.connectionError:
         return ServerFailure('Connection error with ApiServer');
       case DioExceptionType.unknown:
+        if (dioException.message == 'SocketException: Failed host lookup: ') {
+          return ServerFailure('No Internet Connection');
+        }
         return ServerFailure('Something went wrong with ApiServer');
       default:
         return ServerFailure('Something went wrong with ApiServer');
