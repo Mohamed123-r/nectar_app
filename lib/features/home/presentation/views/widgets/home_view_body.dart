@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nectar/constants.dart';
+import 'package:nectar/core/utils/styles.dart';
 import 'package:nectar/features/home/presentation/views/widgets/section_exclusive_offer.dart';
 import 'custom_carousel_slider.dart';
 import 'custom_text_field_search.dart';
@@ -30,6 +32,25 @@ class HomeViewBody extends StatelessWidget {
                       SizedBox(height: 20.sp),
                       const CustomCarouselSlider(),
                       SizedBox(height: 30.sp),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Text(
+                            "Exclusive Offer",
+                            style: Styles.textStyle24,
+                          ),
+                          TextButton(
+                            onPressed: () {},
+                            child: Text(
+                              "See all",
+                              style: Styles.textStyle16.copyWith(
+                                color: kPrimaryColor,
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                      SizedBox(height: 10.sp),
                      const SectionExclusiveOffer(),
                     ],
                   ),
