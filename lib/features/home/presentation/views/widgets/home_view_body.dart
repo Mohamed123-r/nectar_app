@@ -36,7 +36,9 @@ class HomeViewBody extends StatelessWidget {
                         onPressedSeeAllButton: () {},
                       ),
                       SizedBox(height: 10.sp),
-                      const SectionExclusiveOffer(),
+                      SizedBox(
+                          height: 250.sp,
+                          child: const SectionExclusiveOffer()),
                     ],
                   ),
                 ),
