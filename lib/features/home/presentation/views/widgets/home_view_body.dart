@@ -13,35 +13,32 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return NestedScrollView(
-      headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
-        return <Widget>[
-          const CustomSliverAppBar(),
-        ];
-      },
-      body: SafeArea(
-        child: Scaffold(
+    return SafeArea(
+      child: NestedScrollView(
+        headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
+          return <Widget>[
+            const CustomSliverAppBar(),
+          ];
+        },
+        body: Scaffold(
           body: Column(
             children: [
+              SizedBox(height:5.sp),
               const CustomSearchTextField(),
-              Expanded(
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      SizedBox(height: 20.sp),
-                      const CustomCarouselSlider(),
-                      SizedBox(height: 30.sp),
-                      TitleGroupsItems(
-                        title: 'Exclusive Offer',
-                        onPressedSeeAllButton: () {},
-                      ),
-                      SizedBox(height: 10.sp),
-                      SizedBox(
-                          height: 250.sp,
-                          child: const SectionExclusiveOffer()),
-                    ],
+              Column(
+                children: [
+                  SizedBox(height: 20.sp),
+                  const CustomCarouselSlider(),
+                  SizedBox(height: 30.sp),
+                  TitleGroupsItems(
+                    title: 'Exclusive Offer',
+                    onPressedSeeAllButton: () {},
                   ),
-                ),
+                  SizedBox(height: 10.sp),
+                  SizedBox(
+                      height: 250.sp,
+                      child: const SectionExclusiveOffer()),
+                ],
               ),
             ],
           ),
