@@ -1,5 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nectar/features/home/presentation/views/widgets/section_best_selling.dart';
 import 'package:nectar/features/home/presentation/views/widgets/section_exclusive_offer.dart';
 import 'custom_carousel_slider.dart';
 import 'custom_text_field_search.dart';
@@ -23,22 +26,36 @@ class HomeViewBody extends StatelessWidget {
         body: Scaffold(
           body: Column(
             children: [
-              SizedBox(height:5.sp),
+              SizedBox(height: 5.sp),
               const CustomSearchTextField(),
-              Column(
-                children: [
-                  SizedBox(height: 20.sp),
-                  const CustomCarouselSlider(),
-                  SizedBox(height: 30.sp),
-                  TitleGroupsItems(
-                    title: 'Exclusive Offer',
-                    onPressedSeeAllButton: () {},
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      SizedBox(height: 20.sp),
+                      const CustomCarouselSlider(),
+                      SizedBox(height: 30.sp),
+                      TitleGroupsItems(
+                        title: 'Exclusive Offer',
+                        onPressedSeeAllButton: () {},
+                      ),
+                      SizedBox(height: 10.sp),
+                      SizedBox(
+                        height: 250.sp,
+                        child: const SectionExclusiveOffer(),
+                      ),
+                      SizedBox(height: 30.sp),
+                      TitleGroupsItems(
+                        title: 'Best Selling',
+                        onPressedSeeAllButton: () {},
+                      ),
+                      SizedBox(
+                        height: 250.sp,
+                        child: const SectionBestSelling(),
+                      ),
+                    ],
                   ),
-                  SizedBox(height: 10.sp),
-                  SizedBox(
-                      height: 250.sp,
-                      child: const SectionExclusiveOffer()),
-                ],
+                ),
               ),
             ],
           ),
