@@ -5,9 +5,9 @@ import 'package:nectar/core/utils/styles.dart';
 
 class GroceriesItem extends StatelessWidget {
   const GroceriesItem({
-    super.key,
+    super.key, required this.color,
   });
-
+final int color ;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -19,7 +19,7 @@ class GroceriesItem extends StatelessWidget {
           height: 105.sp,
           width: 250.sp,
           decoration: BoxDecoration(
-            color: Color(0xFFF8A44C),
+            color:Color(color),
             borderRadius: BorderRadius.circular(20.sp),
           ),
           child: Padding(

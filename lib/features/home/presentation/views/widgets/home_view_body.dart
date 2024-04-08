@@ -61,7 +61,7 @@ class HomeViewBody extends StatelessWidget {
                       SizedBox(height: 10.sp),
                       SizedBox(
                         height: 105.sp,
-                        child: const SectionGroceries(),
+                        child:  SectionGroceries(),
                       ),
                       SizedBox(height: 10.sp),
                       SizedBox(
