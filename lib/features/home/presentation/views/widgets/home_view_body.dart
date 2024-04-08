@@ -4,6 +4,7 @@ import 'package:nectar/features/home/presentation/views/widgets/section_best_sel
 import 'package:nectar/features/home/presentation/views/widgets/section_exclusive_offer.dart';
 import 'custom_carousel_slider.dart';
 import 'custom_text_field_search.dart';
+import 'section_all_category.dart';
 import 'section_groceries.dart';
 import 'sliver_appbar.dart';
 import 'title_groups_items.dart';
@@ -61,6 +62,11 @@ class HomeViewBody extends StatelessWidget {
                       SizedBox(
                         height: 105.sp,
                         child: const SectionGroceries(),
+                      ),
+                      SizedBox(height: 10.sp),
+                      SizedBox(
+                        height: 250.sp,
+                        child: const SectionAllCategory(),
                       ),
                       SizedBox(height: 20.sp),
                     ],
