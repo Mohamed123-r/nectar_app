@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectar/constants.dart';
 import 'package:nectar/core/utils/styles.dart';
 
@@ -14,23 +15,26 @@ class TitleGroupsItems extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          title,
-          style: Styles.textStyle24,
-        ),
-        TextButton(
-          onPressed: onPressedSeeAllButton,
-          child: Text(
-            "See all",
-            style: Styles.textStyle16.copyWith(
-              color: kPrimaryColor,
-            ),
+    return Padding(
+      padding:  EdgeInsets.only(left: 16.0.sp),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            title,
+            style: Styles.textStyle24,
           ),
-        )
-      ],
+          TextButton(
+            onPressed: onPressedSeeAllButton,
+            child: Text(
+              "See all",
+              style: Styles.textStyle16.copyWith(
+                color: kPrimaryColor,
+              ),
+            ),
+          )
+        ],
+      ),
     );
   }
 }

@@ -7,17 +7,20 @@ class SectionExclusiveOffer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.separated(
-      scrollDirection: Axis.horizontal,
-      itemCount: 10,
-      itemBuilder: (BuildContext context, int index) {
-        return const CategoryItem();
-      },
-      separatorBuilder: (BuildContext context, int index) {
-        return SizedBox(
-          width: 20.sp,
-        );
-      },
+    return Padding(
+      padding:  EdgeInsets.only(left: 16.0.sp),
+      child: ListView.separated(
+        scrollDirection: Axis.horizontal,
+        itemCount: 10,
+        itemBuilder: (BuildContext context, int index) {
+          return const CategoryItem();
+        },
+        separatorBuilder: (BuildContext context, int index) {
+          return SizedBox(
+            width: 20.sp,
+          );
+        },
+      ),
     );
   }
 }
