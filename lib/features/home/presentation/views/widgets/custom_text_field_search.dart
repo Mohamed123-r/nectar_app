@@ -8,7 +8,10 @@ class CustomSearchTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16.0.sp),
+      padding: EdgeInsets.symmetric(
+        horizontal: 16.0.sp,
+        vertical: 8.0.sp,
+      ),
       child: TextFormField(
         cursorColor: kPrimaryColor,
         decoration: InputDecoration(
