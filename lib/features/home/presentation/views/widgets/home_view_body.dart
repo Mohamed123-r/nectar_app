@@ -1,11 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectar/features/home/presentation/views/widgets/section_best_selling.dart';
 import 'package:nectar/features/home/presentation/views/widgets/section_exclusive_offer.dart';
 import 'custom_carousel_slider.dart';
 import 'custom_text_field_search.dart';
+import 'section_groceries.dart';
 import 'sliver_appbar.dart';
 import 'title_groups_items.dart';
 
@@ -53,6 +52,17 @@ class HomeViewBody extends StatelessWidget {
                         height: 250.sp,
                         child: const SectionBestSelling(),
                       ),
+                      SizedBox(height: 20.sp),
+                      TitleGroupsItems(
+                        title: 'Groceries',
+                        onPressedSeeAllButton: () {},
+                      ),
+                      SizedBox(height: 10.sp),
+                      SizedBox(
+                        height: 105.sp,
+                        child: const SectionGroceries(),
+                      ),
+                      SizedBox(height: 20.sp),
                     ],
                   ),
                 ),
