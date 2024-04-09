@@ -5,6 +5,7 @@ class SectionGroceries extends StatelessWidget {
   SectionGroceries({super.key});
 
   final List<int> colors = [
+    //create the number of colors equal to the number of items
     0xFFffA111,
     0xFF88EFEF,
     0xFF44D8D8,
