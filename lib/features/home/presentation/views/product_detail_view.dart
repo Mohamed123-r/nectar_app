@@ -8,7 +8,22 @@ class ProductDetailView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Product Detail'),
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios_new,
+            color: Color(0xFF181725),),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.share,
+            color: Color(0xFF181725),),
+            onPressed: () {},
+          ),
+        ],
       ),
       body: const ProductDetailViewBody(),
     );
