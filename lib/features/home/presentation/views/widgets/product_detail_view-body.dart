@@ -7,13 +7,8 @@ class ProductDetailViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Product Detail'),
-      ),
-      body: const Center(
-        child: Text('Product Detail'),
-      ),
+    return const Center(
+      child: Text('Product Detail'),
     );
   }
 }
