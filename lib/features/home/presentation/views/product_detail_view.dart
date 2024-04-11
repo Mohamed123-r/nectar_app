@@ -9,7 +9,7 @@ class ProductDetailView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.transparent,
+        backgroundColor: const Color(0xFFF2F3F2),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios_new,
             color: Color(0xFF181725),),
