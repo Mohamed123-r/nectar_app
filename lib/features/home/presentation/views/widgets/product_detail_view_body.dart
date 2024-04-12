@@ -1,8 +1,7 @@
-import 'package:carousel_slider/carousel_options.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectar/core/utils/assets.dart';
+import 'custom_carousel_slider.dart';
 
 class ProductDetailViewBody extends StatelessWidget {
   const ProductDetailViewBody({
@@ -23,21 +22,13 @@ class ProductDetailViewBody extends StatelessWidget {
               bottomRight: Radius.circular(40.0),
             ),
           ),
-          child: CarouselSlider(
-            items: [
+          child: CustomCarouselSlider(
+            height: MediaQuery.of(context).size.height / 2.5,
+            imageSliders: [
               Image.asset(Assets.iconTest),
               Image.asset(Assets.iconTest),
               Image.asset(Assets.iconTest),
             ],
-            options: CarouselOptions(
-              height: 200.sp,
-              autoPlayInterval: const Duration(seconds: 3),
-              autoPlayAnimationDuration: const Duration(milliseconds: 800),
-              autoPlayCurve: Curves.fastOutSlowIn,
-              enlargeCenterPage: true,
-              enlargeFactor: 0.3,
-              scrollDirection: Axis.horizontal,
-            ),
           ),
         ),
       ],

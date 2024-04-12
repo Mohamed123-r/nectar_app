@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'widgets/product_detail_view-body.dart';
+import 'widgets/product_detail_view_body.dart';
 
 class ProductDetailView extends StatelessWidget {
   const ProductDetailView({super.key});

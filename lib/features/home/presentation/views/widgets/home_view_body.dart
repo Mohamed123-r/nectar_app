@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nectar/core/utils/assets.dart';
 import 'package:nectar/features/home/presentation/views/widgets/section_best_selling.dart';
 import 'package:nectar/features/home/presentation/views/widgets/section_exclusive_offer.dart';
 import 'custom_carousel_slider.dart';
@@ -32,7 +33,11 @@ class HomeViewBody extends StatelessWidget {
                   child: Column(
                     children: [
                       SizedBox(height: 10.sp),
-                      const CustomCarouselSlider(),
+                       CustomCarouselSlider(height: 115, imageSliders: [
+                        Image.asset(Assets.sliderTest),
+                        Image.asset(Assets.sliderTest),
+                        Image.asset(Assets.sliderTest),
+                      ],),
                       SizedBox(height: 20.sp),
                       TitleGroupsItems(
                         title: 'Exclusive Offer',
