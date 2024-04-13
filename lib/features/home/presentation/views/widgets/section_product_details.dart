@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:nectar/constants.dart';
 import 'package:nectar/core/utils/styles.dart';
@@ -22,13 +23,12 @@ class SectionProductDetails extends StatelessWidget {
                 "Naturel Red Apple",
                 style: Styles.textStyle24,
               ),
-              IconButton(
-                padding: EdgeInsets.zero,
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.favorite_border,
-                  color: kGreyColor,
-                ),
+              InkWell(
+                onTap: () {},
+                child: const Icon(
+                    Icons.favorite_border,
+                    color: kGreyColor,
+                  ),
               ),
             ],
           ),
