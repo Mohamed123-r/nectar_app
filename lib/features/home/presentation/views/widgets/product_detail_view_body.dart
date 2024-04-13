@@ -23,7 +23,8 @@ class ProductDetailViewBody extends StatelessWidget {
             ),
           ),
           child: CustomCarouselSlider(
-            height: MediaQuery.of(context).size.height / 2.5,
+            height: 350.sp,
+            autoPlay: false,
             imageSliders: [
               Image.asset(Assets.iconTest),
               Image.asset(Assets.iconTest),
