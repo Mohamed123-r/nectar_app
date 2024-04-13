@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomCarouselSlider extends StatelessWidget {
   const CustomCarouselSlider({
-    super.key, required this.height, required this.imageSliders,  this.autoPlay=true,
+    super.key, required this.height, required this.imageSliders,  required this.autoPlay,
   });
 
   final List<Widget> imageSliders ;

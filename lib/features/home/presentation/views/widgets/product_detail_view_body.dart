@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nectar/constants.dart';
 import 'package:nectar/core/utils/assets.dart';
+import 'package:nectar/core/utils/styles.dart';
 import 'custom_carousel_slider.dart';
 
 class ProductDetailViewBody extends StatelessWidget {
@@ -29,6 +31,30 @@ class ProductDetailViewBody extends StatelessWidget {
               Image.asset(Assets.iconTest),
               Image.asset(Assets.iconTest),
               Image.asset(Assets.iconTest),
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    "Naturel Red Apple",
+                    style: Styles.textStyle24,
+                  ),
+                  IconButton(
+                    padding: EdgeInsets.zero,
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.favorite_border,
+                      color: kGreyColor,
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),

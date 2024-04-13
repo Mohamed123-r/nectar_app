@@ -33,11 +33,15 @@ class HomeViewBody extends StatelessWidget {
                   child: Column(
                     children: [
                       SizedBox(height: 10.sp),
-                       CustomCarouselSlider(height: 115, imageSliders: [
-                        Image.asset(Assets.sliderTest),
-                        Image.asset(Assets.sliderTest),
-                        Image.asset(Assets.sliderTest),
-                      ],),
+                      CustomCarouselSlider(
+                        height: 115,
+                        autoPlay: true,
+                        imageSliders: [
+                          Image.asset(Assets.sliderTest),
+                          Image.asset(Assets.sliderTest),
+                          Image.asset(Assets.sliderTest),
+                        ],
+                      ),
                       SizedBox(height: 20.sp),
                       TitleGroupsItems(
                         title: 'Exclusive Offer',
@@ -66,7 +70,7 @@ class HomeViewBody extends StatelessWidget {
                       SizedBox(height: 10.sp),
                       SizedBox(
                         height: 105.sp,
-                        child:  SectionGroceries(),
+                        child: SectionGroceries(),
                       ),
                       SizedBox(height: 10.sp),
                       SizedBox(
