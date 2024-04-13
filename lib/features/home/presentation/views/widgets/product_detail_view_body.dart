@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectar/constants.dart';
 import 'package:nectar/core/utils/assets.dart';
 import 'package:nectar/core/utils/styles.dart';
+import 'package:nectar/core/widgets/custom_text_from_text_field.dart';
 import 'custom_carousel_slider.dart';
 
 class ProductDetailViewBody extends StatelessWidget {
@@ -37,6 +38,7 @@ class ProductDetailViewBody extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -55,6 +57,7 @@ class ProductDetailViewBody extends StatelessWidget {
                   ),
                 ],
               ),
+              const CustomTextFromTextField(hintText: "1kg, Price"),
             ],
           ),
         ),
