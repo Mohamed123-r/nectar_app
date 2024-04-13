@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:nectar/constants.dart';
 import 'package:nectar/core/utils/styles.dart';
