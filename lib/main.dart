@@ -2,9 +2,12 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nectar/core/database/cache/cache_helper.dart';
 import 'package:nectar/features/splash/presentation/view/splash_view.dart';
 
-void main() {
+main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await CacheHelper().init();
   runApp(
     DevicePreview(
       enabled: !kReleaseMode,

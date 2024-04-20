@@ -1,18 +1,17 @@
 import 'package:easy_splash_screen/easy_splash_screen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectar/constants.dart';
+import 'package:nectar/core/database/cache/cache_helper.dart';
 import 'package:nectar/core/utils/assets.dart';
 import 'package:flutter/material.dart';
+import 'package:nectar/features/logIn/presentation/views/log_in_view.dart';
 import 'package:nectar/features/onBoarding/presentation/view/on_boarding_view.dart';
 
-class SplashPage extends StatefulWidget {
-  const SplashPage({Key? key}) : super(key: key);
+class SplashPage extends StatelessWidget {
+  SplashPage({Key? key}) : super(key: key);
 
-  @override
-  _SplashPageState createState() => _SplashPageState();
-}
+  final bool onBoarding = CacheHelper().getData(key: "onBoarding") ?? false;
 
-class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return EasySplashScreen(
@@ -26,7 +25,7 @@ class _SplashPageState extends State<SplashPage> {
       backgroundColor: kPrimaryColor,
       loaderColor: Colors.white,
       showLoader: true,
-      navigator: const OnBoardingView(),
+      navigator: onBoarding ? const LogInView() : const OnBoardingView(),
       durationInSeconds: 3,
     );
   }
