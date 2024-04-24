@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:nectar/core/api/api_consumer.dart';
+import 'package:nectar/core/errors/exceptions.dart';
 
 class DioConsumer extends ApiConsumer {
   final dio = Dio();
@@ -10,8 +11,7 @@ class DioConsumer extends ApiConsumer {
       final response = await dio.delete(path);
       return response.data;
     } on DioException catch (e) {
-
-
+      handelExceptions(e);
     }
   }
 
@@ -21,7 +21,7 @@ class DioConsumer extends ApiConsumer {
       final response = await dio.get(path);
       return response.data;
     } on DioException catch (e) {
-      // TODO
+      handelExceptions(e);
     }
   }
 
@@ -33,7 +33,7 @@ class DioConsumer extends ApiConsumer {
           data: formData ? FormData.fromMap(data!) : data);
       return response.data;
     } on DioException catch (e) {
-      // TODO
+      handelExceptions(e);
     }
   }
 
@@ -45,7 +45,7 @@ class DioConsumer extends ApiConsumer {
           await dio.post(path, data: formData ? FormData.fromMap(data!) : data);
       return response.data;
     } on DioException catch (e) {
-      // TODO
+      handelExceptions(e);
     }
   }
 
@@ -57,7 +57,7 @@ class DioConsumer extends ApiConsumer {
           await dio.put(path, data: formData ? FormData.fromMap(data!) : data);
       return response.data;
     } on DioException catch (e) {
-      // TODO
+      handelExceptions(e);
     }
   }
 }
