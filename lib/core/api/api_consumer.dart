@@ -5,19 +5,19 @@ abstract class ApiConsumer {
 
   Future<dynamic> post(
     String path, {
-    Map<String, dynamic> data,
+    Map<String, dynamic>? data,
     bool formData = false,
   });
 
   Future<dynamic> put(
     String path, {
-    Map<String, dynamic> data,
+    Map<String, dynamic>? data,
     bool formData = false,
   });
 
   Future<dynamic> patch(
     String path, {
-    Map<String, dynamic> data,
+    Map<String, dynamic>? data,
     bool formData = false,
   });
 

@@ -1,13 +1,15 @@
 import 'package:dio/dio.dart';
-import 'package:nectar/core/database/cache/cache_helper.dart';
+
+import '../database/cache/cache_helper.dart';
+import 'end_point.dart';
 
 class ApiInterceptor extends Interceptor {
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
     super.onRequest(options, handler);
-    options.headers['token'] = CacheHelper().getData(key: "token") != null
-        ? "FOODAPI ${CacheHelper().getData(key: "token")}"
+    options.headers['token'] = CacheHelper().getData(key: ApiKeys.token) != null
+        ? 'FOODAPI ${CacheHelper().getData(key: ApiKeys.token)}'
         : null;
-    handler.next(options);
+    ;
   }
 }

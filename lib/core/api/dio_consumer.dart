@@ -2,8 +2,25 @@ import 'package:dio/dio.dart';
 import 'package:nectar/core/api/api_consumer.dart';
 import 'package:nectar/core/errors/exceptions.dart';
 
+import 'api_interceptor.dart';
+import 'end_point.dart';
+
 class DioConsumer extends ApiConsumer {
-  final dio = Dio();
+  final Dio dio;
+
+  DioConsumer({required this.dio}) {
+    dio.options.baseUrl = EndPoint.baseUrl;
+    dio.interceptors.add(ApiInterceptor());
+    dio.interceptors.add(
+      LogInterceptor(
+        error: true,
+        requestBody: true,
+        responseBody: true,
+        requestHeader: true,
+        responseHeader: true,
+      ),
+    );
+  }
 
   @override
   Future delete(String path) async {
