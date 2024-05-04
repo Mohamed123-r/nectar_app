@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectar/core/utils/assets.dart';
 import 'custom_carousel_slider.dart';
+import 'section_number_and_price_in_product_details.dart';
 import 'section_product_details.dart';
 
 class ProductDetailViewBody extends StatelessWidget {
@@ -34,6 +35,7 @@ class ProductDetailViewBody extends StatelessWidget {
           ),
         ),
         const SectionProductDetails(),
+        const SectionNumberAndPriceInProductDetails(),
       ],
     );
   }
