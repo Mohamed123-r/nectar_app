@@ -4,7 +4,7 @@ import 'package:nectar/core/utils/assets.dart';
 import 'package:nectar/features/home/presentation/views/widgets/section_best_selling.dart';
 import 'package:nectar/features/home/presentation/views/widgets/section_exclusive_offer.dart';
 import 'custom_carousel_slider.dart';
-import 'custom_text_field_search.dart';
+import '../../../../../core/widgets/custom_text_field_search.dart';
 import 'section_all_category.dart';
 import 'section_groceries.dart';
 import 'sliver_appbar.dart';
