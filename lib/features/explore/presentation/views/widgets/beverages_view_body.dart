@@ -2,25 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'category_item.dart';
 
-
 class BeveragesViewBod extends StatelessWidget {
   const BeveragesViewBod({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: GridView.builder(
-        itemCount: 10,
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          crossAxisSpacing: 15.w,
-          childAspectRatio: 0.73.sp,
+      body: GridView.count(
+        mainAxisSpacing: 25.h,
+        crossAxisSpacing: 0,
+        childAspectRatio: 0.82,
+        crossAxisCount: 2,
+        children: List.generate(
+          15,
+          (index) => const CategoryItem(),
         ),
-        itemBuilder: (context, index) {
-          return const Center(
-            child: CategoryItem(),
-          );
-        },
       ),
     );
   }

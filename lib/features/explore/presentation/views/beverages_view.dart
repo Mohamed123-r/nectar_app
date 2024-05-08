@@ -33,9 +33,6 @@ class BeveragesView extends StatelessWidget {
             ),
           ],
         ),
-        body: const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16.0),
-          child: BeveragesViewBod(),
-        ));
+        body: const BeveragesViewBod());
   }
 }
