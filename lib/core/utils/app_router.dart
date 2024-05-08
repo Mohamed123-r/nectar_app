@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nectar/core/views/congratulation_view.dart';
+import 'package:nectar/features/explore/presentation/views/beverages_view.dart';
+import 'package:nectar/features/explore/presentation/views/explore_view.dart';
 import 'package:nectar/features/home/presentation/views/home_view.dart';
 import 'package:nectar/features/home/presentation/views/product_detail_view.dart';
 import 'package:nectar/features/logIn/presentation/views/forget_password_view.dart';
@@ -18,6 +20,8 @@ abstract class AppRouter {
   static const kSignUpView = '/signup';
   static const kHomeView = '/home';
   static const kProductDetailView = '/productDetail';
+  static const kExploreView = '/explore';
+  static const kBeveragesView = '/beverages';
 
   static Route<Object?> router(RouteSettings settings) {
     switch (settings.name) {
@@ -58,6 +62,15 @@ abstract class AppRouter {
       case kProductDetailView:
         return MaterialPageRoute(builder: (context) {
           return const ProductDetailView(); //replace this Scaffold with a Home Screen
+        });
+      case kExploreView:
+        return MaterialPageRoute(builder: (context) {
+          return const ExploreView(); //replace this Scaffold with a Home Screen
+        });
+
+      case kBeveragesView:
+        return MaterialPageRoute(builder: (context) {
+          return const BeveragesView(); //replace this Scaffold with a Home Screen
         });
 
       default:
