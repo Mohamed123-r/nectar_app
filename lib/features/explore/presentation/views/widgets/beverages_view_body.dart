@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'category_item.dart';
 
-import '../../../../../core/utils/styles.dart';
 
 class BeveragesViewBod extends StatelessWidget {
   const BeveragesViewBod({super.key});
@@ -8,33 +9,19 @@ class BeveragesViewBod extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text(
-          'Beverages',
-          style: Styles.textStyle20,
+      body: GridView.builder(
+        itemCount: 10,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          crossAxisSpacing: 15.w,
+          childAspectRatio: 0.73.sp,
         ),
-        leading:
-        IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: const Icon(
-            Icons.arrow_back_ios,
-            color: Colors.black,
-          ),
-        ),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon:  const Icon(
-              Icons.tune,
-              color: Colors.black,
-            ),
-          ),
-        ],
+        itemBuilder: (context, index) {
+          return const Center(
+            child: CategoryItem(),
+          );
+        },
       ),
-      body: Container(),
     );
   }
 }
