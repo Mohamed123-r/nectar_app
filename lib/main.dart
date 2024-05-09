@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectar/core/database/cache/cache_helper.dart';
-import 'package:nectar/features/explore/presentation/views/explore_view.dart';
+import 'package:nectar/features/search/presentation/views/search_view.dart';
 
 main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: ExploreView(),
+        home: SearchView(),
       ),
     );
   }
