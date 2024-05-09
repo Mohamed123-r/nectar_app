@@ -24,7 +24,7 @@ class CategoryItem extends StatelessWidget {
             );
           },
           child: Container(
-            width: 175.sp,
+            width: 190.sp,
             height: 250.sp,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20.sp),
