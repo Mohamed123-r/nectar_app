@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nectar/core/utils/app_router.dart';
 import 'package:nectar/core/widgets/category_item.dart';
 import 'search_text_field.dart';
 
@@ -13,7 +14,14 @@ class SearchViewBody extends StatelessWidget {
         title: const SearchTextField(),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                AppRouter.router(
+                  const RouteSettings(name: AppRouter.kFiltersView),
+                ),
+              );
+            },
             icon: const Icon(
               Icons.tune,
               color: Colors.black,
