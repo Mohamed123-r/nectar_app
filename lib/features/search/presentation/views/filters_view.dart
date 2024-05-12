@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectar/core/utils/styles.dart';
+import 'package:nectar/core/widgets/custom_button.dart';
 import 'widgets/filters_view_body.dart';
 
 class FiltersView extends StatelessWidget {
@@ -23,6 +25,14 @@ class FiltersView extends StatelessWidget {
           style: Styles.textStyle20,
         ),
         centerTitle: true,
+      ),
+      bottomNavigationBar:Container(
+        color: const Color(0xffF2F3F2),
+        padding: EdgeInsets.all(16.sp),
+        child: CustomButton(
+          text: "Apply Filter",
+          onPressed: () {},
+        ),
       ),
       body: const FiltersViewBody(),
     );
