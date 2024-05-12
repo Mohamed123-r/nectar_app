@@ -34,7 +34,7 @@ class FiltersView extends StatelessWidget {
           onPressed: () {},
         ),
       ),
-      body: const FiltersViewBody(),
+      body:  const FiltersViewBody(),
     );
   }
 }
