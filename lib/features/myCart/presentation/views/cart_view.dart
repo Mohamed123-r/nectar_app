@@ -15,9 +15,9 @@ class CartView extends StatelessWidget {
           style: Styles.textStyle20,
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-        child: const MyCartBody(),
+      body: const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16.0),
+        child: MyCartBody(),
       ),
     );
   }
