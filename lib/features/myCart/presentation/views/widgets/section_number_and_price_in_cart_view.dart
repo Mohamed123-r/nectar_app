@@ -20,14 +20,16 @@ class _SectionNumberAndPriceInProductDetailsState
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Row(
             children: [
-              IconButton(
+              MaterialButton(
                 padding: EdgeInsets.zero,
+                minWidth: 45.w,
+                height: 45.h,
                 onPressed: () {
                   setState(() {
                     if (number > 1) {
@@ -35,42 +37,56 @@ class _SectionNumberAndPriceInProductDetailsState
                     }
                   });
                 },
-                icon: Icon(
-                  Icons.remove,
-                  color: kGreyColor,
-                  size: 30.sp,
-                ),
-              ),
-              Container(
-                width: 45.w,
-                height: 45.h,
-                decoration: BoxDecoration(
+                shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16.0.sp),
-                    border: Border.all()),
+                    side: const BorderSide(
+                      color: kGreyColor,
+                    )),
                 child: Center(
-                  child: Text(
-                    number.toString(),
-                    style: Styles.textStyle18,
+                  child: Icon(
+                    Icons.remove,
+                    color: kGreyColor,
+                    size: 30.sp,
                   ),
                 ),
               ),
-              IconButton(
+              SizedBox(
+                width: 10.w,
+              ),
+              Text(
+                number.toString(),
+                style: Styles.textStyle18,
+              ),
+              SizedBox(
+                width: 10.w,
+              ),
+              MaterialButton(
+                padding: EdgeInsets.zero,
+                minWidth: 45.w,
+                height: 45.h,
                 onPressed: () {
                   setState(() {
                     number++;
                   });
                 },
-                icon: Icon(
-                  Icons.add,
-                  color: kPrimaryColor,
-                  size: 30.sp,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16.0.sp),
+                    side: const BorderSide(
+                      color: kGreyColor,
+                    )),
+                child: Center(
+                  child: Icon(
+                    Icons.add,
+                    color: kPrimaryColor,
+                    size: 30.sp,
+                  ),
                 ),
               ),
             ],
           ),
           const Text(
             "\$4.99",
-            style: Styles.textStyle24,
+            style: Styles.textStyle18,
           ),
         ],
       ),
