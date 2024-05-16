@@ -30,21 +30,19 @@ class MyCartBody extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
-
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     const Text(
                       "Bell Pepper Red",
                       style: Styles.textStyle16,
                     ),
-                    MaterialButton(
-                      onPressed: () {  },
-                      child: Icon(
-                          Icons.close,
-                          color: kGreyColor,
-                        ),
+                    GestureDetector(
+                      onTap: () {},
+                      child: const Icon(
+                        Icons.close,
+                        color: kGreyColor,
+                      ),
                     ),
-
                   ],
                 ),
                 const Text(
