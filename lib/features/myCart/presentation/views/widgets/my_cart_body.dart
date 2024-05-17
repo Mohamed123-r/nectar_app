@@ -7,53 +7,55 @@ import 'package:nectar/features/myCart/presentation/views/widgets/section_number
 
 class MyCartBody extends StatelessWidget {
   const MyCartBody({super.key});
-//TODO: implement
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Row(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Image.asset(
-              Assets.iconTest,
-              fit: BoxFit.fill,
-              width: 85.sp,
-              height: 85.sp,
+    return ListView.builder(
+      itemCount: 5,
+      itemBuilder: (BuildContext context, int index) {
+        return  Row(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Image.asset(
+                Assets.iconTest,
+                fit: BoxFit.fill,
+                width: 85.sp,
+                height: 85.sp,
+              ),
             ),
-          ),
-          Expanded(
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Text(
-                      "Bell Pepper Red",
-                      style: Styles.textStyle16,
-                    ),
-                    GestureDetector(
-                      onTap: () {},
-                      child: const Icon(
-                        Icons.close,
-                        color: kGreyColor,
+            Expanded(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Text(
+                        "Bell Pepper Red",
+                        style: Styles.textStyle16,
                       ),
-                    ),
-                  ],
-                ),
-                const Text(
-                  "1kg Price",
-                  style: Styles.textStyle14,
-                ),
-                const SectionNumberAndPriceInCartView()
-              ],
-            ),
-          )
-        ],
-      ),
+                      GestureDetector(
+                        onTap: () {},
+                        child: const Icon(
+                          Icons.close,
+                          color: kGreyColor,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const Text(
+                    "1kg Price",
+                    style: Styles.textStyle14,
+                  ),
+                  const SectionNumberAndPriceInCartView()
+                ],
+              ),
+            )
+          ],
+        );
+      },
     );
   }
 }
