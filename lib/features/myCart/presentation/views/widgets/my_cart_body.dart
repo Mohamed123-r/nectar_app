@@ -21,9 +21,9 @@ class MyCartBody extends StatelessWidget {
         separatorBuilder: (BuildContext context, int index) => const Divider(),
       ),
       Positioned(
-        bottom: 10,
-        left: 0,
-        right: 0,
+        bottom: 10.h,
+        left: 0.h,
+        right: 0.h,
         child: CustomButton(
           text: 'Go to Checkout',
           onPressed: () {},

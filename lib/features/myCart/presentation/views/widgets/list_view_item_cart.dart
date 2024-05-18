@@ -37,7 +37,8 @@ class ListViewItemCart extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () {},
-                    child: const Icon(
+                    child:  Icon(
+                      size: 25.sp,
                       Icons.close,
                       color: kGreyColor,
                     ),

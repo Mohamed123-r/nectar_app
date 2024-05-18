@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectar/constants.dart';
 import 'package:nectar/core/utils/styles.dart';
 import 'widgets/my_cart_body.dart';
@@ -23,9 +24,9 @@ class CartView extends StatelessWidget {
           style: Styles.textStyle20,
         ),
       ),
-      body: const Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16.0),
-        child: MyCartBody(),
+      body:  Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16.0.sp),
+        child: const MyCartBody(),
       ),
     );
   }
