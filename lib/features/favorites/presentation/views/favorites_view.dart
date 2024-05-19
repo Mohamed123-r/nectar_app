@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectar/constants.dart';
 import 'package:nectar/core/utils/styles.dart';
-
 import 'widgets/favourite_view_body.dart';
 
 class FavoritesView extends StatelessWidget {
@@ -23,11 +23,10 @@ class FavoritesView extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: const Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16.0),
-        child: FavoritesViewBody(),
+      body:  Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16.0.sp),
+        child: const FavoritesViewBody(),
       ),
     );
   }
 }
-

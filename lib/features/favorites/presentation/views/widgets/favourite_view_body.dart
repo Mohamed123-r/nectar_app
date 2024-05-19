@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectar/core/widgets/custom_button.dart';
-
 import 'list_view_item_favourite.dart';
 
 class FavoritesViewBody extends StatelessWidget {
