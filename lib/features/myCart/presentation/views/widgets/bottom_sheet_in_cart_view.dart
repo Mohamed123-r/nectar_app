@@ -60,6 +60,27 @@ class BottomSheetInCartView extends StatelessWidget {
                 body: const Text("Item 1"),
                 isExpanded: false,
               ),
+              ExpansionPanel(
+                backgroundColor: Colors.white,
+                headerBuilder: (context, isExpanded) {
+                  return Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Payment",
+                        style: Styles.textStyle18.copyWith(
+                          color: kGreyColor,
+                        ),
+                      ),
+                     const Icon(
+                       Icons.payment_outlined,
+                     )
+                    ],
+                  );
+                },
+                body: const Text("Item 1"),
+                isExpanded: false,
+              ),
             ],
           ),
         ),
