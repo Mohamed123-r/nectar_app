@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nectar/constants.dart';
 import 'package:nectar/core/utils/app_router.dart';
 import 'package:nectar/core/utils/assets.dart';
 import 'package:nectar/core/utils/styles.dart';
