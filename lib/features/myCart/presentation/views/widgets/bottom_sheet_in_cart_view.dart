@@ -137,7 +137,7 @@ class BottomSheetInCartView extends StatelessWidget {
             child: CustomButton(
               text: 'Place Order',
               onPressed: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                     context,
                     AppRouter.router(
                       const RouteSettings(name: AppRouter.kOrderAcceptedView),
