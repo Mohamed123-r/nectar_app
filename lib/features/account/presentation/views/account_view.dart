@@ -8,22 +8,8 @@ class AccountView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        shape: const Border(
-          bottom: BorderSide(
-            color: kGreyColor,
-            width: 0.5,
-          ),
-        ),
-        centerTitle: true,
-        title: const Text(
-          "Account",
-          style: Styles.textStyle20,
-        ),
-      ),
-    body: const AccountViewBody(),
+    return const Scaffold(
+    body: AccountViewBody(),
     );
   }
 }
