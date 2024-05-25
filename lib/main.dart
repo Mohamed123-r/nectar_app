@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectar/core/database/cache/cache_helper.dart';
-import 'package:nectar/features/myCart/presentation/views/cart_view.dart';
-
+import 'package:nectar/features/account/presentation/views/account_view.dart';
 main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await CacheHelper().init();
@@ -22,7 +21,7 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: CartView(),
+        home: AccountView(),
       ),
     );
   }
