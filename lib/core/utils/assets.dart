@@ -7,5 +7,6 @@ abstract class Assets {
   static const String background = "assets/images/background.jpg";
   static const String congratulation = "assets/images/congratulation.png";
   static const String proTest = "assets/images/proTest.png";
+  static const String accontTest = "assets/images/account_test.png";
 
 }
