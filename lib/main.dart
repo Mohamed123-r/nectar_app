@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectar/core/database/cache/cache_helper.dart';
-import 'features/home/presentation/views/home_view.dart';
+import 'package:nectar/features/splash/presentation/view/splash_view.dart';
 
 main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: HomeView(),
+        home: SplashView(),
       ),
     );
   }
