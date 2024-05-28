@@ -27,7 +27,7 @@ class FiltersView extends StatelessWidget {
         centerTitle: true,
       ),
       bottomNavigationBar:Container(
-        color: const Color(0xffF2F3F2),
+        color:  Colors.grey.shade300,
         padding: EdgeInsets.all(16.sp),
         child: CustomButton(
           text: "Apply Filter",

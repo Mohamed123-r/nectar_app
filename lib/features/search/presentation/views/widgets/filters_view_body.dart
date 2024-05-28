@@ -17,7 +17,7 @@ class FiltersViewBody extends StatelessWidget {
           topLeft: Radius.circular(40.sp),
           topRight: Radius.circular(40.sp),
         ),
-        color: const Color(0xffF2F3F2),
+        color:  Colors.grey.shade300,
       ),
       child: const Column(
         children: [
