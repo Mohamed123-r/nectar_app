@@ -32,7 +32,9 @@ class ExploreViewBody extends StatelessWidget {
         children: [
           const CustomSearchTextField(),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            padding:  EdgeInsets.symmetric(
+                vertical: 8.h,
+                horizontal: 16.0.w),
             child: GridView.count(
               physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,

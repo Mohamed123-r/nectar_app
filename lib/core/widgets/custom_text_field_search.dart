@@ -21,7 +21,6 @@ class CustomSearchTextField extends StatelessWidget {
           ),
           hintText: 'Search Store',
           filled: true,
-          fillColor: const Color(0xFFF2F3F2),
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide.none,
             borderRadius: BorderRadius.circular(15.0.sp),
