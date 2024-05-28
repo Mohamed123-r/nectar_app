@@ -21,10 +21,19 @@ class OrderAcceptedView extends StatelessWidget {
             SizedBox(
               height: 20.sp,
             ),
-            CustomButton(
-              backgroundColor: Colors.transparent,
-              text: 'Back to Home',
-              onPressed: () {
+            InkWell(
+              borderRadius: BorderRadius.circular(19),
+              child: const SizedBox(
+                width: double.infinity,
+                height: 67,
+                child: Center(
+                  child: Text(
+                    'Back to Home',
+                    style: Styles.textStyle18,
+                  ),
+                ),
+              ),
+              onTap: () {
                 Navigator.pushReplacement(
                   context,
                   AppRouter.router(
