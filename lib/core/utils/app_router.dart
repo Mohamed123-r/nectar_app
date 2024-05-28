@@ -10,6 +10,7 @@ import 'package:nectar/features/myCart/presentation/views/cart_view.dart';
 import 'package:nectar/features/myCart/presentation/views/order_accepted_view.dart';
 import 'package:nectar/features/onBoarding/presentation/view/on_boarding_view.dart';
 import 'package:nectar/features/search/presentation/views/filters_view.dart';
+import 'package:nectar/features/search/presentation/views/search_view.dart';
 import 'package:nectar/features/signUp/presentation/views/sign-up_view.dart';
 import 'package:nectar/features/splash/presentation/view/splash_view.dart';
 
@@ -24,6 +25,7 @@ abstract class AppRouter {
   static const kHomeView = '/home';
   static const kProductDetailView = '/productDetail';
   static const kExploreView = '/explore';
+  static const kSearchView = '/search';
   static const kBeveragesView = '/beverages';
   static const kFiltersView = '/filters';
   static const kMyCartView = '/myCart';
@@ -72,6 +74,11 @@ abstract class AppRouter {
       case kExploreView:
         return MaterialPageRoute(builder: (context) {
           return const ExploreView(); //replace this Scaffold with a Home Screen
+        });
+
+      case kSearchView:
+        return MaterialPageRoute(builder: (context) {
+          return const SearchView(); //replace this Scaffold with a Home Screen
         });
 
       case kBeveragesView:

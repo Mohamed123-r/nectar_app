@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nectar/core/widgets/custom_text_field_search.dart';
+import 'package:nectar/core/utils/app_router.dart';
+import 'package:nectar/core/utils/styles.dart';
 import 'grid_view_item.dart';
 
 class ExploreViewBody extends StatelessWidget {
@@ -30,11 +31,50 @@ class ExploreViewBody extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          const CustomSearchTextField(),
           Padding(
-            padding:  EdgeInsets.symmetric(
-                vertical: 8.h,
-                horizontal: 16.0.w),
+            padding: EdgeInsets.symmetric(vertical: 8.0.h, horizontal: 16.0.w),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  AppRouter.router(
+                    const RouteSettings(
+                      name: AppRouter.kSearchView,
+                    ),
+                  ),
+                );
+              },
+              child: Container(
+                height: 60.h,
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                  color: Colors.black12,
+                  borderRadius: BorderRadius.circular(15.r),
+                ),
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: 15.w,
+                    ),
+                    const Icon(
+                      Icons.search,
+                    ),
+                    SizedBox(
+                      width: 10.w,
+                    ),
+                    Text(
+                      'Search Store',
+                      style: Styles.textStyle16.copyWith(
+                        color: Colors.grey.shade700,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 16.0.w),
             child: GridView.count(
               physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,
