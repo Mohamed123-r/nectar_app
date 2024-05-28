@@ -16,7 +16,7 @@ class AccountViewBody extends StatelessWidget {
           mainAxisSize: MainAxisSize.max,
           children: [
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0.w, vertical: 24.0.h),
+              padding: EdgeInsets.all(16.0.sp),
               child: Row(
                 children: [
                   Container(
