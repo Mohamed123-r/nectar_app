@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectar/core/utils/assets.dart';
-import 'package:nectar/core/widgets/custom_button.dart';
 import 'package:nectar/features/home/presentation/views/widgets/section_details_product_details.dart';
 import 'custom_carousel_slider.dart';
 import 'section_number_and_price_in_product_details.dart';
@@ -24,7 +23,7 @@ class _ProductDetailViewBodyState extends State<ProductDetailViewBody> {
         children: [
           Container(
             width: MediaQuery.of(context).size.width,
-            height: 290.sp,
+            height: 360.sp,
             decoration: const BoxDecoration(
               color: Color(0xFFF2F3F2),
               borderRadius: BorderRadius.only(
@@ -45,13 +44,6 @@ class _ProductDetailViewBodyState extends State<ProductDetailViewBody> {
           const SectionProductDetails(),
           const SectionNumberAndPriceInProductDetails(),
           const SectionDetailsProductDetails(),
-          Padding(
-            padding:  EdgeInsets.symmetric(horizontal: 16.0.w),
-            child: CustomButton(
-              text: "Add to cart",
-              onPressed: () {},
-            ),
-          ),
         ],
       ),
     );
