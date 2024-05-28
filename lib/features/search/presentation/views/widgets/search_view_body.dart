@@ -11,6 +11,7 @@ class SearchViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: const SearchTextField(),
         actions: [
           IconButton(
@@ -30,7 +31,7 @@ class SearchViewBody extends StatelessWidget {
         ],
       ),
       body: Container(
-        margin: EdgeInsets.symmetric(horizontal: 16.h),
+        margin: EdgeInsets.symmetric(vertical: 8.h, horizontal: 16.h),
         child: GridView.count(
           mainAxisSpacing: 10.h,
           crossAxisSpacing: 15.h,
