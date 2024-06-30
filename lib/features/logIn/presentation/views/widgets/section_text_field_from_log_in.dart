@@ -5,37 +5,43 @@ import 'package:nectar/core/widgets/custom_text_field.dart';
 import 'package:nectar/core/widgets/custom_text_from_text_field.dart';
 import 'package:nectar/core/widgets/password_text_field.dart';
 
+import '../../manager/cubits/log_in_cubit.dart';
+
 class SectionTextFieldFromLogIn extends StatelessWidget {
   const SectionTextFieldFromLogIn({
-    super.key,
+    super.key, required this.logInEmail, required this.logInPassword,
   });
 
+  final TextEditingController logInEmail ;
+  final TextEditingController logInPassword ;
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-         const Text(
+        const Text(
           "Loging",
           style: Styles.textStyle26,
         ),
-         SizedBox(height: 15.sp),
+        SizedBox(height: 15.sp),
         const CustomTextFromTextField(
           hintText: 'Enter your emails and password',
         ),
-         SizedBox(height: 40.sp),
+        SizedBox(height: 40.sp),
         const CustomTextFromTextField(
           hintText: 'Email',
         ),
         CustomTextField(
           onSaved: (value) {},
           keyboardType: TextInputType.emailAddress,
+          controller: logInEmail,
+
         ),
-         SizedBox(height: 30.sp),
+        SizedBox(height: 30.sp),
         const CustomTextFromTextField(
           hintText: 'Password',
         ),
-        const PasswordTextField(),
+         PasswordTextField(controller: logInPassword,),
       ],
     );
   }

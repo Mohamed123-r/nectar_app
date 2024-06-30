@@ -8,12 +8,13 @@ class CustomTextField extends StatelessWidget {
     this.onChanged,
     this.onSaved,
     required this.keyboardType,
-    this.obscureText = false,
+    this.obscureText = false, this.controller,
   });
 
   final Widget? suffixIcon;
   final TextInputType keyboardType;
   final bool obscureText;
+  final TextEditingController? controller;
 
   final void Function(String)? onChanged;
   final void Function(String?)? onSaved;
@@ -44,6 +45,7 @@ class CustomTextField extends StatelessWidget {
         ),
       ),
       keyboardType: keyboardType,
+      controller:controller ,
     );
   }
 }
