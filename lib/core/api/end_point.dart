@@ -1,6 +1,7 @@
 class EndPoint {
   static String baseUrl =
-      "http://nectorteam-001-site1.etempurl.com/api/Account/";
+      "http://ahmedsalah.runasp.net/api/Account/";
+
   static String login = "login";
 }
 
