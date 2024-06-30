@@ -1,3 +1,6 @@
+
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:nectar/core/api/api_consumer.dart';
@@ -32,10 +35,16 @@ class LogInCubit extends Cubit<LogInState> {
         ApiKeys.email: logInEmail.text,
         ApiKeys.password: logInPassword.text,
       });
-      emit(LogInSuccess());
-      logInModel = LogInModel.fromJson(response);
+      log(ApiKeys.email.toString());
+      log(ApiKeys.password.toString());
+      if (response['statusCode'] == 200) {
+        emit(LogInSuccess());
+        logInModel = LogInModel.fromJson(response);
+      }else{
+        emit(LogInError(response['message']));
+      }
     } on ServerException catch (e) {
-      emit(LogInError(e.errorModel.message!));
+      emit(LogInError(e.errorModel.errors!.confirmPassword![0]));
     }
   }
 }
