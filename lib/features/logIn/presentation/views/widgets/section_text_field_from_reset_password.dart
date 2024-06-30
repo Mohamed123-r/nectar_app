@@ -4,7 +4,6 @@ import 'package:nectar/core/widgets/custom_text_field.dart';
 import 'package:nectar/core/widgets/custom_text_from_text_field.dart';
 import 'package:nectar/core/widgets/password_text_field.dart';
 
-import '../../manager/cubits/log_in_cubit.dart';
 
 class SectionTextFieldFromResetPassword extends StatelessWidget {
   const SectionTextFieldFromResetPassword({super.key});
