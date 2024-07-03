@@ -1,6 +1,6 @@
 import 'package:nectar/core/api/end_point.dart';
 
-import 'data.dart';
+import 'data_from_log_in.dart';
 
 class LogInModel {
   LogInModel({
@@ -15,13 +15,13 @@ class LogInModel {
     isSuccess = json[ApiKeys.isSuccess];
     message = json[ApiKeys.message];
     data =
-        json[ApiKeys.data] != null ? Data.fromJson(json[ApiKeys.data]) : null;
+        json[ApiKeys.data] != null ? DataFromLogIn.fromJson(json[ApiKeys.data]) : null;
   }
 
   num? statusCode;
   bool? isSuccess;
   String? message;
-  Data? data;
+  DataFromLogIn? data;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};

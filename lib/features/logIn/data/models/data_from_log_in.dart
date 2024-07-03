@@ -1,14 +1,14 @@
 import 'package:nectar/core/api/end_point.dart';
 
-class Data {
-  Data({
+class DataFromLogIn{
+  DataFromLogIn({
       this.isAuthenticated, 
       this.id, 
       this.email, 
       this.username, 
       this.token,});
 
-  Data.fromJson(dynamic json) {
+  DataFromLogIn.fromJson(dynamic json) {
     isAuthenticated = json['isAuthenticated'];
     id = json[ApiKeys.id];
     email = json[ApiKeys.email];
