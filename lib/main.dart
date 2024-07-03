@@ -21,11 +21,7 @@ main() async {
   );
 
   runApp(
-    BlocProvider(
-        create: (context) => LogInCubit(
-          DioConsumer(dio: Dio()),
-        ),
-        child: const MyApp()),
+    const MyApp(),
   );
 }
 
@@ -34,7 +30,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
+    return const ScreenUtilInit(
       designSize: Size(413.83, 896),
       minTextAdapt: true,
       splitScreenMode: true,

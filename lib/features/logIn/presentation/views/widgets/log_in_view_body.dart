@@ -1,3 +1,4 @@
+import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -12,9 +13,14 @@ import 'package:nectar/features/logIn/presentation/views/widgets/section_text_fi
 
 import '../../manager/cubits/log_in_cubit.dart';
 
-class LogInViewBody extends StatelessWidget {
+class LogInViewBody extends StatefulWidget {
   const LogInViewBody({super.key});
 
+  @override
+  State<LogInViewBody> createState() => _LogInViewBodyState();
+}
+
+class _LogInViewBodyState extends State<LogInViewBody> {
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<LogInCubit, LogInState>(
@@ -24,16 +30,20 @@ class LogInViewBody extends StatelessWidget {
             context,
             AppRouter.router(
               const RouteSettings(
-                name: AppRouter.kHomeView,
+                name: AppRouter.kOrderAcceptedView,
               ),
             ),
           );
         } else if (state is LogInError) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: Text(state.message),
-            ),
-          );
+          AwesomeDialog(
+            context: context,
+            dialogType: DialogType.error,
+            headerAnimationLoop: false,
+            animType: AnimType.scale,
+            title: 'Oops!',
+            desc: state.message,
+            btnOkOnPress: () {},
+          ).show();
         }
       },
       builder: (context, state) {
@@ -81,14 +91,16 @@ class LogInViewBody extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: 20.sp),
-                 state is LogInLoading ? const CircularProgressIndicator(
-                   color: kPrimaryColor,
-                 ) : CustomButton(
-                    text: "Log In",
-                    onPressed: () {
-                      context.read<LogInCubit>().logIN();
-                    },
-                  ),
+                  state is LogInLoading
+                      ? const CircularProgressIndicator(
+                          color: kPrimaryColor,
+                        )
+                      : CustomButton(
+                          text: "Log In",
+                          onPressed: () {
+                            context.read<LogInCubit>().logIN();
+                          },
+                        ),
                   SizedBox(height: 25.sp),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
