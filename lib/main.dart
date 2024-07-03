@@ -1,13 +1,9 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nectar/core/api/dio_consumer.dart';
 import 'package:nectar/core/database/cache/cache_helper.dart';
 import 'package:nectar/features/splash/presentation/view/splash_view.dart';
 
-import 'features/logIn/presentation/manager/cubits/log_in_cubit.dart';
 
 main() async {
   WidgetsFlutterBinding.ensureInitialized();
