@@ -4,6 +4,7 @@ import 'package:nectar/core/utils/styles.dart';
 import 'package:nectar/core/widgets/custom_text_field.dart';
 import 'package:nectar/core/widgets/custom_text_from_text_field.dart';
 import 'package:nectar/core/widgets/password_text_field.dart';
+import 'package:nectar/features/logIn/presentation/views/function/validator.dart';
 
 class SectionTextFieldFromLogIn extends StatelessWidget {
   const SectionTextFieldFromLogIn({
@@ -30,6 +31,9 @@ class SectionTextFieldFromLogIn extends StatelessWidget {
           hintText: 'Email',
         ),
         CustomTextField(
+          validator: (value) {
+           return validatorOfEmail(value);
+          },
           onSaved: (value) {},
           keyboardType: TextInputType.emailAddress,
           controller: logInEmail,
@@ -39,7 +43,12 @@ class SectionTextFieldFromLogIn extends StatelessWidget {
         const CustomTextFromTextField(
           hintText: 'Password',
         ),
-         PasswordTextField(controller: logInPassword,),
+         PasswordTextField(
+
+           validator: (value) {
+           return  validatorOfPassword(value);
+           },
+           controller: logInPassword,),
       ],
     );
   }
