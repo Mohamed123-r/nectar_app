@@ -30,7 +30,7 @@ class _LogInViewBodyState extends State<LogInViewBody> {
             context,
             AppRouter.router(
               const RouteSettings(
-                name: AppRouter.kOrderAcceptedView,
+                name: AppRouter.kCongratulationView,
               ),
             ),
           );
