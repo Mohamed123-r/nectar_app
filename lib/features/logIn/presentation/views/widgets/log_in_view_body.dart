@@ -35,7 +35,8 @@ class _LogInViewBodyState extends State<LogInViewBody> {
             ),
           );
         } else if (state is LogInError) {
-          awesomeDialog(context, state);
+          awesomeDialog(context, state ,
+          isLogin: true);
         }
       },
       builder: (context, state) {
