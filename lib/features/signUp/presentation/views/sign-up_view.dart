@@ -1,5 +1,9 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:nectar/features/signUp/presentation/manager/cubits/sign_up_cubit.dart';
 
+import '../../../../core/api/dio_consumer.dart';
 import 'widgets/sign_up_body.dart';
 
 class SignUpView extends StatelessWidget {
@@ -7,8 +11,15 @@ class SignUpView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SignUpBody(),
+    return BlocProvider(
+      create: (context) => SignUpCubit(
+        DioConsumer(
+          dio: Dio(),
+        ),
+      ),
+      child: const Scaffold(
+        body: SignUpBody(),
+      ),
     );
   }
 }

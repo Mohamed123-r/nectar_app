@@ -5,10 +5,23 @@ import 'package:nectar/core/widgets/custom_text_field.dart';
 import 'package:nectar/core/widgets/custom_text_from_text_field.dart';
 import 'package:nectar/core/widgets/password_text_field.dart';
 
-class SctionTextFieldFromSignUp extends StatelessWidget {
-  const SctionTextFieldFromSignUp({
+import '../../../../../core/function/validator.dart';
+
+class SectionTextFieldFromSignUp extends StatelessWidget {
+  const SectionTextFieldFromSignUp({
     super.key,
+    required this.username,
+    required this.phoneNumber,
+    required this.email,
+    required this.password,
+    required this.confirmPassword,
   });
+
+  final TextEditingController username;
+  final TextEditingController phoneNumber;
+  final TextEditingController email;
+  final TextEditingController password;
+  final TextEditingController confirmPassword;
 
   @override
   Widget build(BuildContext context) {
@@ -28,22 +41,40 @@ class SctionTextFieldFromSignUp extends StatelessWidget {
           hintText: 'Username',
         ),
         CustomTextField(
+          controller: username,
           onSaved: (value) {},
           keyboardType: TextInputType.text,
+          validator: (value) {
+            if (value == null || value.isEmpty) {
+              return 'Please enter username';
+            }
+            return null;
+          },
         ),
         SizedBox(height: 30.sp),
         const CustomTextFromTextField(
           hintText: 'Phone Number',
         ),
         CustomTextField(
+          controller: phoneNumber,
           onSaved: (value) {},
           keyboardType: TextInputType.phone,
+          validator: (value) {
+            if (value == null || value.isEmpty) {
+              return 'Please enter phone number';
+            }
+            return null;
+          },
         ),
         SizedBox(height: 30.sp),
         const CustomTextFromTextField(
           hintText: 'Email',
         ),
         CustomTextField(
+          controller: email,
+          validator: (value) {
+            return validatorOfEmail(value);
+          },
           onSaved: (value) {},
           keyboardType: TextInputType.emailAddress,
         ),
@@ -51,12 +82,26 @@ class SctionTextFieldFromSignUp extends StatelessWidget {
         const CustomTextFromTextField(
           hintText: 'Password',
         ),
-        const PasswordTextField(),
+        PasswordTextField(
+          controller: password,
+          validator: (value) {
+            return validatorOfPassword(value);
+          },
+        ),
         SizedBox(height: 30.sp),
         const CustomTextFromTextField(
           hintText: 'Confirm Password',
         ),
-        const PasswordTextField(),
+        PasswordTextField(
+          controller: confirmPassword,
+          validator: (value) {
+            if (value != password.text) {
+              return 'Password does not match';
+            } else {
+              return null;
+            }
+          },
+        ),
       ],
     );
   }
