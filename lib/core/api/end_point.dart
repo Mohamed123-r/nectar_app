@@ -3,6 +3,7 @@ class EndPoint {
 
   static String login = "login";
   static String register = "Register";
+  static String forgetPassword = "SendNumForEmail";
 }
 
 class ApiKeys {
