@@ -5,7 +5,6 @@ import 'package:nectar/core/widgets/custom_image_logo.dart';
 import 'package:nectar/core/widgets/custom_text_from_text_field.dart';
 
 import '../../../../../constants.dart';
-import '../../../../../core/function/awesome_dialog.dart';
 import '../../../../../core/function/validator.dart';
 import '../../../../../core/utils/app_router.dart';
 import '../../../../../core/utils/assets.dart';
@@ -14,9 +13,9 @@ import '../../../../../core/widgets/custom_button.dart';
 import '../../../../../core/widgets/custom_text_field.dart';
 import '../../manager/cubits/send_num_cubit.dart';
 import '../../manager/cubits/send_num_state.dart';
+import '../function/awesome_dialog.dart';
 import '../widgets/bottom_sheet_body_from_send_code.dart';
 
-import 'package:awesome_dialog/awesome_dialog.dart';
 
 class ForgetPasswordBody extends StatelessWidget {
   const ForgetPasswordBody({
@@ -139,20 +138,3 @@ class ForgetPasswordBody extends StatelessWidget {
   }
 }
 
-Future<dynamic> awesomeDialogFromSendCode(BuildContext context, dynamic state,
-    {bool isLogin = false}) {
-  return AwesomeDialog(
-    context: context,
-    dialogType: DialogType.error,
-    animType: AnimType.bottomSlide,
-    title: 'Oops, Error',
-    desc: 'Please enter a valid email',
-    descTextStyle: Styles.textStyle14.copyWith(color: Colors.black),
-    btnOk: CustomButton(
-      text: 'Please try again',
-      onPressed: () {
-        Navigator.pop(context);
-      },
-    ),
-  ).show();
-}
