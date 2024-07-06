@@ -4,13 +4,15 @@ import 'package:nectar/core/utils/styles.dart';
 import 'package:nectar/core/widgets/custom_button.dart';
 
 Future<dynamic> awesomeDialogFromSendCode(BuildContext context, dynamic state,
-    {bool isLogin = false}) {
+    {bool isLogin = false , String? message}) {
+
+
   return AwesomeDialog(
     context: context,
     dialogType: DialogType.error,
     animType: AnimType.bottomSlide,
     title: 'Oops, Error',
-    desc: 'Please enter a valid email',
+    desc: message,
     descTextStyle: Styles.textStyle14.copyWith(color: Colors.black),
     btnOk: CustomButton(
       text: 'Please try again',

@@ -4,6 +4,7 @@ class EndPoint {
   static String login = "login";
   static String register = "Register";
   static String forgetPassword = "SendNumForEmail";
+  static String confirmNum = "ConfirmNum";
 }
 
 class ApiKeys {
