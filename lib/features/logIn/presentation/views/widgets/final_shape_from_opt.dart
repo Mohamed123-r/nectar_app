@@ -6,9 +6,10 @@ import 'custom_item_from_opt.dart';
 
 class FinalShapeFromOPT extends StatelessWidget {
   const FinalShapeFromOPT({
-    super.key,
+    super.key, required this.confirmNum,
   });
 
+  final List<TextEditingController> confirmNum;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,15 +19,15 @@ class FinalShapeFromOPT extends StatelessWidget {
         border: Border.all(color: kPrimaryColor),
         borderRadius: BorderRadius.circular(15.sp),
       ),
-      child: const Row(
+      child:  Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          CustomItemFromOPT(),
-          CustomItemFromOPT(),
-          CustomItemFromOPT(),
-          CustomItemFromOPT(),
-          CustomItemFromOPT(),
-          CustomItemFromOPT(),
+          CustomItemFromOPT(controller: confirmNum[0] ,),
+          CustomItemFromOPT(controller:  confirmNum[1] ,),
+          CustomItemFromOPT(controller:  confirmNum[2],),
+          CustomItemFromOPT(controller: confirmNum[3]  ,),
+          CustomItemFromOPT(controller:  confirmNum[4] ,),
+          CustomItemFromOPT(controller:  confirmNum[5] ,),
         ],
       ),
     );

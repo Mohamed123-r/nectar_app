@@ -5,7 +5,10 @@ import 'package:nectar/constants.dart';
 class CustomItemFromOPT extends StatelessWidget {
   const CustomItemFromOPT({
     super.key,
+    required this.controller,
   });
+
+  final TextEditingController controller;
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +16,7 @@ class CustomItemFromOPT extends StatelessWidget {
       height: 45.sp,
       width: 45.sp,
       child: TextFormField(
+        controller: controller,
         keyboardType: TextInputType.number,
         maxLines: 1,
         cursorColor: kGreyColor,
@@ -29,7 +33,7 @@ class CustomItemFromOPT extends StatelessWidget {
             borderRadius: BorderRadius.circular(5.sp),
             borderSide: const BorderSide(color: kPrimaryColor),
           ),
-          enabledBorder:const UnderlineInputBorder(
+          enabledBorder: const UnderlineInputBorder(
             borderSide: BorderSide(color: kGreyColor),
           ),
         ),
