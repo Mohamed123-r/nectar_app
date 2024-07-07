@@ -1,13 +1,16 @@
 import 'dart:developer';
 
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nectar/core/api/dio_consumer.dart';
 import 'package:nectar/core/utils/styles.dart';
 import 'package:nectar/core/widgets/custom_button.dart';
 import 'package:nectar/core/widgets/custom_text_from_text_field.dart';
 import 'package:nectar/features/logIn/presentation/manager/cubits/confirm_num_cubit.dart';
 import 'package:nectar/features/logIn/presentation/views/widgets/section_text_field_from_send_code.dart';
+import '../../manager/cubits/change_password_cubit.dart';
 import '../function/awesome_dialog.dart';
 import 'bottom_sheet_body_from_reset_password.dart';
 
@@ -31,7 +34,12 @@ class BottomSheetBodyFromSendCode extends StatelessWidget {
             ),
             context: context,
             builder: (context) {
-              return const BottomSheetBodyFromResetPassword();
+              return BlocProvider(
+                create: (context) => ChangePasswordCubit(
+                  DioConsumer(dio: Dio()),
+                ),
+                child: const BottomSheetBodyFromResetPassword(),
+              );
             },
           );
         } else if (state is ConfirmNumError) {
