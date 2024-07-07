@@ -1,3 +1,4 @@
+import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -20,15 +21,8 @@ class BottomSheetBodyFromResetPassword extends StatelessWidget {
     return BlocConsumer<ChangePasswordCubit, ChangePasswordState>(
       listener: (context, state) {
         if (state is ChangePasswordSuccess) {
-          Navigator.pop(context);
-          Navigator.pushReplacement(
-            context,
-            AppRouter.router(
-              const RouteSettings(
-                name: AppRouter.kLogInView,
-              ),
-            ),
-          );
+
+          buildShow(context);
         } else if (state is ChangePasswordError) {
           awesomeDialog(
             context,
@@ -94,5 +88,36 @@ class BottomSheetBodyFromResetPassword extends StatelessWidget {
         );
       },
     );
+  }
+
+  Future<dynamic> buildShow(BuildContext context) {
+    return AwesomeDialog(
+          context: context,
+          dialogType: DialogType.success,
+          animType: AnimType.scale,
+          title: 'Success',
+          desc:'Successfully reset password',
+          descTextStyle: Styles.textStyle14.copyWith(color: Colors.black),
+          btnOk: Column(
+            children: [
+              CustomButton(
+                text: 'Ok',
+                onPressed: () {
+
+                  Navigator.pop(context);
+                  Navigator.pushReplacement(
+                    context,
+                    AppRouter.router(
+                      const RouteSettings(
+                        name: AppRouter.kLogInView,
+                      ),
+                    ),
+                  );
+                },
+              ),
+              SizedBox(height: 10.sp),
+            ],
+          ),
+        ).show();
   }
 }

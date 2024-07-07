@@ -11,7 +11,6 @@ Future<dynamic> awesomeDialog(BuildContext context, dynamic state,
   return AwesomeDialog(
     context: context,
     dialogType: DialogType.warning,
-    headerAnimationLoop: false,
     animType: AnimType.scale,
     title: 'Oops!',
     desc:
