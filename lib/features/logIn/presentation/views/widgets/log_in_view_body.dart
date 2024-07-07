@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectar/constants.dart';
+import 'package:nectar/core/database/cache/cache_helper.dart';
 import 'package:nectar/core/function/awesome_dialog.dart';
 import 'package:nectar/core/utils/app_router.dart';
 import 'package:nectar/core/utils/assets.dart';
@@ -26,6 +27,7 @@ class _LogInViewBodyState extends State<LogInViewBody> {
     return BlocConsumer<LogInCubit, LogInState>(
       listener: (context, state) {
         if (state is LogInSuccess) {
+          CacheHelper().put(key: 'logInSuccess', value: true);
           Navigator.pushReplacement(
             context,
             AppRouter.router(
