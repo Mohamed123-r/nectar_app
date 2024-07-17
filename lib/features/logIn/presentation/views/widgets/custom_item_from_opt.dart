@@ -17,7 +17,7 @@ class CustomItemFromOPT extends StatelessWidget {
       width: 45.sp,
       child: TextFormField(
         controller: controller,
-        keyboardType: TextInputType.number,
+        keyboardType: null,
         maxLines: 1,
         cursorColor: kGreyColor,
         onSaved: (value) {},
